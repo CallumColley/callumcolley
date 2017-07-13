@@ -126,7 +126,7 @@ nav.main a:hover {
     position: relative;
     z-index:1;
     display:block;
-    bottom: -70px;
+    top: 40px;
     width: 24px;
     height: 24px;
     margin:auto;
@@ -316,6 +316,7 @@ h2 {
     display:block;
     width:35%;
     margin:10px auto auto auto;
+    text-decoration: none;
 }
 
 .row-half a:hover {
