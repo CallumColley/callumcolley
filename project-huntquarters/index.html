@@ -21,13 +21,13 @@
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('img/banner-01.jpg');"></div>
+                <div class="fill" style="background-image:url('img/banner-01.jpg');"></div> <!---- IMAGE SOURCE "https://tinyurl.com/y7g9a3e4" -->
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('img/banner-02.jpg');"></div>
+                <div class="fill" style="background-image:url('img/banner-02.jpg');"></div> <!---- IMAGE SOURCE "https://tinyurl.com/ybmtwamy" -->
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('img/banner-03.jpg');"></div>
+                <div class="fill" style="background-image:url('img/banner-03.jpg');"></div> <!---- IMAGE SOURCE "http://www.dustinwilliamsmedia.com/photography/" -->
             </div>
         </div>
 
@@ -239,6 +239,18 @@
                 function closeNav() {
                     document.getElementById("mySidenav").style.width = "0";
                 }
+            </script>
+
+            <!-- Clean URL -->
+            <script>
+            $(document).ready(function() {
+
+            $("a").click(function(){
+
+                  ($(this).attr('href').replace(/\#*/g, ""))
+
+                });
+            });
             </script>
 </body>
 

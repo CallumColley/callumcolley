@@ -308,6 +308,24 @@ h2 {
     box-sizing: inherit;
 }
 
+.row-half a {
+    background:white;
+    padding:10px 30px;
+    border-radius:20px;
+    border:1px solid #4888be;
+    display:block;
+    width:35%;
+    margin:10px auto auto auto;
+    text-decoration: none;
+}
+
+.row-half a:hover {
+    background:#4888be;
+    color:white;
+    text-decoration:none;
+    transition-duration:0.7s;
+}
+
 
 /*//////////// Start Contact Section////////////////*/
 
@@ -547,6 +565,13 @@ footer i.fa {
 
 
 /*//////////// @Media //////////////////////////////*/
+
+@media (max-width:992px) {
+    .row-half a {
+        width:auto;
+        margin-top:30px
+    }
+}
 
 @media (max-width:832px) {
     #particles-js h1 {
