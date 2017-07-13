@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HUNTQUARTERS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="img/icon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('img/banner-01.jpg');"></div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('img/banner-02.jpg');"></div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('img/banner-03.jpg');"></div>
+            </div>
+        </div>
+
+        <!-- Header Content -->
+        <div class="head">
+            <img class="hq-logo" src="img/logo.png">
+            <div class="menu">
+                <span><a href="http://fontawesome.io"><i class="fa fa-user-circle-o"></i></a></span>
+                <span><a href="http://fontawesome.io"><i class="fa fa-shopping-cart"></i></a></span>
+                <span onclick="openNav()"><i class="fa fa-bars"></i></span>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">Home</a>
+                    <a href="#brands">Brands</a>
+                    <a href="#product">Popular</a>
+                    <a href="#">Intakes</a>
+                    <a href="#">Exhausts</a>
+                    <a href="#">Brakes</a>
+                    <a href="#">Suspension</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="search-opt">
+                <i class="fa fa-wrench"><span>Parts</span></i>
+                <i class="fa divider" style="padding:0px;cursor:default;color: rgba(103, 103, 103, 0.3);"><span></span></i>
+                <i class="fa fa-car"><span>Cars</span></i>
+            </div>
+            <div class="search-a">
+                <form>
+                    <input type="text" name="search" placeholder="Search parts...">
+                </form>
+            </div>
+            <div class="search-b">
+                <form>
+                    <div>
+                        <select name="year">
+                            <option value="" disabled selected>VEHICLE YEAR *</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="make">
+                            <option value="" disabled selected>VEHICLE MAKE *</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="model">
+                            <option value="" disabled selected>VEHICLE MODEL *</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="sub-model">
+                            <option value="" disabled selected>VEHICLE SUB MODEL *</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div class="holder">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <section id="brands">
+        <div class="container">
+            <div class="row title">
+                <h2>Associated Brands</h2>
+                <p>Here are some of our top associated brands.</p>
+            </div>
+            <div class="row">
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <img src="img/airlift.png" style="width:100%">
+                </div>
+                <div class="w3-third">
+                  <img src="img/borla.png" style="width:100%">
+                </div>
+                <div class="w3-third">
+                  <img src="img/hawk.png" style="width:100%">
+                </div>
+              </div>
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <img src="img/hella.png" style="width:100%">
+                </div>
+                <div class="w3-third">
+                  <img src="img/hotchkis.png" style="width:100%">
+                </div>
+                <div class="w3-third">
+                  <img src="img/injen.png" style="width:100%">
+                </div>
+              </div>
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <img src="img/magnaflow.png" style="width:100%">
+                </div>
+                <div class="w3-third">
+                  <img src="img/zex.png" style="width:100%">
+                </div>
+                <div class="w3-third">
+                  <span class="text btn"><a href="http://google.com">See More</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="product">
+          <div class="container">
+            <div class="row title">
+              <h2>Popular Products</h2>
+              <p>Here are some of our most viewed products</p>
+            </div>
+            <div class="row">
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <a href="http://google.com/"><img src="img/product01.png" style="width:100%"></a>
+                  <span class="btn"><a href="http://google.com">Air Ride</a></span>
+                </div>
+                <div class="w3-third">
+                  <a href="http://google.com/"><img src="img/product02.jpg" style="width:100%"></a>
+                  <span class="btn"><a href="http://google.com">Borla Exhaust</a></span>
+                </div>
+                <div class="w3-third">
+                  <a href="http://google.com/"><img src="img/product03.png" style="width:100%"></a>
+                  <span class="btn"><a href="http://google.com">Merch</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="featured">
+          <div class="container">
+            <div class="row title">
+              <h2>Featured Categories</h2>
+              <p>Here are a few categories from our wide range</p>
+            </div>
+            <div class="row">
+              <div class="w3-row-padding">
+                <div class="w3-third">
+                  <a href="http://google.com/"><img src="img/brakes.png" style="width:100%"></a>
+                  <span class="btn"><a href="http://google.com">Brakes</a></span>
+                </div>
+                <div class="w3-third">
+                  <a href="http://google.com/"><img src="img/intakes.png" style="width:100%"></a>
+                  <span class="btn"><a href="http://google.com">Intakes</a></span>
+                </div>
+                <div class="w3-third">
+                  <a href="http://google.com/"><img src="img/exhaust.png" style="width:100%"></a>
+                  <span class="btn"><a href="http://google.com">Exhausts</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="smedia">
+                <a href="#"><i class="fa fa-youtube hi-icon"></i></a>
+                <a href="#"><i class="fa fa-instagram hi-icon"></i></a>
+              </div>
+              <div class="additions">
+                <a href="#">Shop Brands</a>
+                <a href="#">My Account</a>
+                <a href="#">Price Comparison</a>
+                <a href="#">Contact</a>
+              </div>
+              <div class="row bottom">
+                  <a href="#"><span></span></a>
+              </div>
+            <!-- jQuery -->
+            <script src="js/jquery.js"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/bootstrap-select.min.js"></script>
+
+            <!-- Script to Activate the Carousel -->
+            <script>
+                $('.carousel').carousel({
+                    interval: 5000 //changes the speed
+                })
+            </script>
+
+            <!-- Script for side bar -->
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "200px";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+</body>
+
+</html>
