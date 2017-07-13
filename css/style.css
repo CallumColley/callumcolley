@@ -170,7 +170,8 @@ p {
 /*///////// Start Skill Section //////////*/
 
 #about {
-    padding-top: 1px
+    padding-top: 1px;
+    padding-bottom: 1px
 }
 
 #about i.fa {
@@ -311,7 +312,8 @@ h2 {
 /*//////////// Start Contact Section////////////////*/
 
 #contact {
-    padding-top: 1px
+    padding-top: 1px;
+    padding-bottom: 1px
 }
 
 #contact h2 {
@@ -319,8 +321,17 @@ h2 {
 }
 
 #contact .row p {
-    width: 85%;
+    width: 65%;
     margin: auto
+}
+
+.notice {
+    padding-top:30px;
+    text-align:left
+}
+
+#contact .row {
+    border-bottom:1px solid rgba(128, 128, 128, 0.2)
 }
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
@@ -482,7 +493,6 @@ textarea:hover {
 #submit:hover {
     color: #e2dedb;
 }
-
 
 /*///////////////Start Footer/////////////*/
 

@@ -1405,8 +1405,8 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    color: rgba(255, 255, 255, 0.6);
-    text-transform:uppercase
+    color: rgb(0, 0, 0);
+    text-transform:uppercase;
 }
 
 a {

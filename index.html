@@ -29,7 +29,7 @@
       <div class="row mynav">
         <nav class="main">
           <ul>
-            <li><a href="#landing">Home</a></li>
+            <li><a href="">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -100,52 +100,54 @@
       <div class="container">
         <div class="row">
           <h2>Contact Me</h2>
-          <p>Looking for a fresh new website? Please take a few moments to tell me all about it, I'd love the chance to earn your business.</p>
+          <p style="margin-bottom:20px">Looking for a fresh new website? Please take a few moments to tell me all about it, I'd love the chance to earn your business.</p>
         </div>
         <section class="contact-form">
           <div class="row">
-            <form id="form" class="topBefore" action="contact.php" method="post">
+            <p class="notice"><b>*</b> If you have a desktop email client installed, you can go ahead and put the contact form below to some use. If not, or unsure, use this <b>callumcolleybn@gmail.com</b></p>
+            <form id="form" class="topBefore" action="mailto:callumcolleybn@gmail.com" method="post" enctype="text/plain">
               <input id="name" type="text" name="name" placeholder="NAME">
               <input id="email" type="text" name="email" placeholder="E-MAIL">
               <textarea id="comments" type="text" name="message" placeholder="MESSAGE"></textarea>
-              <input id="submit" type="submit" name="submit" value="GO!">
+              <input id="submit" type="submit" value="GO!">
             </form>
           </div>
         </section>
       </div>
-      <footer>
-        <div class="container">
-          <div class="row">
-            <div class="social-medias">
-              <a href="https://www.phpschool.io/" target="_blank"><i class="fa fa-github white float"></i></a>
-              <a href="https://www.phpschool.io/" target="_blank"><i class="fa fa-facebook blue float"></i></a>
-              <a href="https://www.phpschool.io/" target="_blank"><i class="fa fa-twitter light-blue float"></i></a>
-              <a href="https://www.phpschool.io/" target="_blank"><i class="fa fa-google-plus red float"></i></a>
-            </div>
-            <div class="site-tag">
-              <p>Handmade by me © 2017.</p>
-            </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="social-medias">
+            <a href="https://www.phpschool.io/" target="_blank"><i class="fa fa-github white float"></i></a>
+            <a href="https://www.phpschool.io/" target="_blank"><i class="fa fa-facebook blue float"></i></a>
+            <a href="https://www.phpschool.io/" target="_blank"><i class="fa fa-twitter light-blue float"></i></a>
+            <a href="https://www.phpschool.io/" target="_blank"><i class="fa fa-google-plus red float"></i></a>
+          </div>
+          <div class="site-tag">
+            <p>Handmade by me © 2017.</p>
           </div>
         </div>
-      </footer>
-      <!-- jQuery -->
-      <script src="js/jquery.js"></script>
+      </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-      <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
-      <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-      <script src="js/index.js"></script>
+    <!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
+    <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src="js/index.js"></script>
 
-      <!-- Clean URL -->
-      <script>
-      $(document).ready(function() {
+    <!-- Clean URL -->
+    <script>
+    $(document).ready(function() {
 
-      $("a").click(function(){
+    $("a").click(function(){
 
-            ($(this).attr('href').replace(/\#*/g, ""))
+          ($(this).attr('href').replace(/\#*/g, ""))
 
-          });
-      });
-      </script>
+        });
+    });
+    </script>
 </body>
 
 </html>
