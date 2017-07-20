@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RSArchitects</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link href="img/icon.png" rel="shortcut icon" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="head">
+    <nav>
+      <div class="logo">
+        <a href="#home"><b>RSA</b>rchitects</a>
+      </div>
+      <ul class="cl-effect-1">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <span onclick="openNav()"><i class="fa fa-bars"></i></span>
+    </nav>
+    <!--MOBILE NAV-->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <header id="home" class="parallax">
+    <div class="row title">
+      <h1><b>RSA</b>rchitects</h1>
+      <div class="row varied">
+        <p>- One of the most established architectural practices in the region.</p>
+      </div>
+    </div>
+    <div class="row wrapper">
+      <a class="btn" href="#about">Explore</a>
+    </div>
+  </header>
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <h2>About</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <p>For over 60 years, we at RiverSide Architects have delivered innovative and sustainable design solutions for a wide range of developments through our multidisciplinary expertise in town and master planning, urban design, architecture, engineering and interior design. Our focus is designing built environments that enrich and transform people’s lives.</p>
+          <p>We pay close attention to addressing our clients and communities’ needs. Personal collaboration with partners, clients and stakeholders is carried out at all levels to deliver quality designs and implementation. We have a diverse talent pool within the RSA Group which employs more than 1,300 people.</p>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <img src="https://tinyurl.com/y7joywmm" alt="John" style="width:100%">
+              <div class="crd-container">
+                <h1>Joseph</h1>
+                <p class="c-title">Architect |</p>
+                <p>Harvard University</p>
+                <div style="margin: 20px 0;">
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <button>Contact</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <img src="https://tinyurl.com/yayn7tn2" alt="John" style="width:100%">
+              <div class="crd-container">
+                <h1>Mark</h1>
+                <p class="c-title">Architect |</p>
+                <p>Cambridge University</p>
+                <div style="margin: 20px 0;">
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <button>Contact</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <img src="https://tinyurl.com/ya2wxzp8" alt="John" style="width:100%">
+              <div class="crd-container">
+                <h1>Alexander</h1>
+                <p class="c-title">Architect |</p>
+                <p>Stanford University</p>
+                <div style="margin: 20px 0;">
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <button>Contact</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="split" class="parallax"></div>
+  <section id="work">
+    <div class="container">
+      <div class="row">
+        <h2>Projects</h2>
+        <h5>Take a look at these fulfilled designs</h5>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <img class="slides" src="img/building1.jpg">
+          <img class="slides" src="img/building2.jpg">
+          <img class="slides" src="img/building3.jpg">
+          <img class="slides" src="img/building4.jpg">
+          <img class="slides" src="img/building5.jpg">
+          <img class="slides" src="img/building6.jpg">
+          <button class="arrow-button display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="arrow-button display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <div class="col-sm-4 sm">
+          <img src="img/interior.jpg">
+        </div>
+        <div class="col-sm-4 sm">
+          <img src="img/interior2.jpg">
+        </div>
+      </div>
+      <div class="row" style="margin-bottom:50px">
+        <div class="col-sm-4 sm">
+          <img src="img/building8.jpg">
+        </div>
+        <div class="col-sm-8 sm">
+          <img src="img/building7.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="split2" class="parallax"></div>
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <h2>Contact</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="info">
+            <span><i class="fa fa-map-marker"></i>Shirley Grove, Stockport, UK</span>
+            <span><i class="fa fa-phone"></i>+44 8081 570410</span>
+            <span><i class="fa fa-envelope"></i>rs.architects@rsa.com</span>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <form>
+            <div>
+              <input id="name" type="text" name="name" placeholder="NAME">
+              <input id="email" type="text" name="email" placeholder="E-MAIL">
+            </div>
+            <textarea id="comments" type="text" name="message" placeholder="MESSAGE"></textarea>
+            <input id="submit" type="submit" value="SEND">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <a class="logo" href="#home"><b>RSA</b>rchitects</a>
+      </div>
+    </div>
+  </footer>
+  <!--Scripts-->
+
+  <script src="js/jquery.js"></script>
+
+<!--Script for slideshow-->
+
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("slides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  </script>
+
+  <!-- Script for side bar -->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "200px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+</body>
+</html>
