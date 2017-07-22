@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+html,
+body {
+  margin:0;
+  height:100%;
+  width:100%;
+}
+
+header {
+  background:url(../img/background1.png);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  height:100%;
+  width:100%;
+}
+
+.row {
+  width:100%;
+}
+
+.col-sm-6 {
+	margin-top:100px;
+}
+
+.nav {
+	width:60%;
+	margin:auto;
+	display:block;
+	position:relative
+}
+
+.logo {
+	display:block;
+	position: relative;
+	width:80%;
+	margin:auto
+}
+
+.logo img {
+	margin:auto;
+	margin-bottom:30px;
+	width:100%
+}
+
+nav {
+  margin:auto;
+  display:block;
+  width:100%;
+}
+
+nav ul {
+  display:block;
+  list-style:none;
+  padding:10px;
+}
+
+nav ul li {
+  padding:8px;
+  font-size:1.8rem;
+  border-bottom:2px solid rgba(0, 0, 0, 0.15);
+  transition: 0.2s ease-in
+}
+
+nav ul li:hover {
+  border-bottom:2px solid #f1bb00;
+}
+
+nav ul a {
+  color:rgb(122, 120, 112);
+  font-family:'roboto condensed', sans-serif;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition: 0.1s ease-in
+
+}
+
+nav ul a:hover {
+  text-decoration:none;
+  color:white
+}
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: '>';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+
+/*--------------------------Media Query--------*/
+
+@media (max-width:901px) {
+	.logo {
+		width:90%
+	}
+	.nav {
+		width:85%
+	}
+}
+
+@media (max-width:800px) {
+	header {
+	  background:url(../img/background2.png);
+	  background-size:cover;
+	  background-position:center;
+	  background-repeat:no-repeat;
+	  height:100%;
+	  width:100%;
+	}
+	nav ul li a {
+		color:white
+	}
+	.vary {
+		visibility:hidden
+	}
+}
+
+@media (max-width:767px) {
+	.col-sm-6 {
+		margin:auto
+	}
+}
+
+@media (max-width:600px) {
+	.logo {
+		margin-top:80px
+	}
+	.col-sm-6 {
+		margin:auto
+	}
+}
+
+@media (max-width:500px) {
+	.logo {
+		margin-top:100px;
+		width:100%
+	}
+}
+
+@media (min-width:1440px) {
+	.logo {
+		width:90%
+	}
+	.logo img {
+		margin:auto
+	}
+	.nav {
+		width:60%
+	}
+	nav ul li {
+		padding:15px 0
+	}
+}
