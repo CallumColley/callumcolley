@@ -1,58 +1,230 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>LIFT.</title>
+  <title>Lift | Home</title>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <link href="img/favicon.png" rel="shortcut icon" type="image/png">
-  <link rel="stylesheet" href="css/index.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <!--Landing Page Begins-->
   <header>
-    <div class="col-sm-6 vary"></div>
-    <div class="col-sm-6">
-      <div class="row">
-        <div class="logo">
-          <img src="img/logo.png" alt="LIFT.">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!--mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img alt="LIFT." src="img/logo2.png">
+          </a>
+        </div>
+        <!--normal display-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html" class="indi">Home.</a></li>
+            <li><a href="bodybuilding.html" class="indi">BodyBuilding.</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle indi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Goal <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <li><a class="sweep-right" href="leanmuscle.html"><span class="num">01</span>LEAN MUSCLE</a></li>
+                      <li><a class="sweep-right" href="muscleandstrength.html"><span class="num">02</span>MUSCLE AND STRENGTH</a></li>
+                    </div>
+                    <div class="col-sm-12">
+                      <li><a class="sweep-right" href="dietandweightloss.html"><span class="num">03</span>DIET AND WEIGHT LOSS</a></li>
+                      <li><a class="sweep-right" href="sportsperformance.html"><span class="num">04</span>SPORTS PERFORMANCE</a></li>
+                    </div>
+                  </div>
+                </ul>
+                <ul class="dropdown-menu mobile">
+                  <li><a href="leanmuscle.html">LEAN MUSCLE</a></li>
+                  <li><a href="muscleandstrength.html">MUSCLE AND STRENGTH</a></li>
+                  <li><a href="dietandweightloss.html">DIET AND WEIGHT LOSS</a></li>
+                  <li><a href="sportsperformance.html">SPORTS PERFORMANCE</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html" class="indi">About.</a></li>
+          </ul>
         </div>
       </div>
-      <div class="row">
-        <div class="nav">
-          <nav>
-            <ul class="cl-effect-1">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="comingsoon.html">BodyBuilding</a></li>
-              <li><a href="comingsoon.html">Your Goal</a></li>
-              <li><a href="comingsoon.html">About</a></li>
-            </ul>
-          </nav>
+    </nav>
+  </header>
+  <!---Start of Home---------->
+
+  <section class="full-height">
+    <div class="pg-background" style="background-image:url(img/dumbbell.png)"></div>
+    <div class="slide-wrapper full-height width">
+      <div class="slide-content margin max-width div-carousel">
+        <div class="slide">
+          <div>
+            <div class="border"></div>
+            <h2>your time is now</h2>
+            <p>There's no better time than the present to get started on the progression towards the physique you want. After all, this stuff doesn't just happen over night, so why wait? You better get started. Here at lift you can read up on how you can achieve the results you're looking for. What's your goal?</p>
+            <a class="btn-1" href="goal.html">FIND MY GOAL</a>
+          </div>
+        </div>
+        <div class="slide">
+          <div>
+            <div class="border"></div>
+            <h2>get <b>"</b>hoe ready<b>"</b></h2>
+            <p>Bodybuilding is the utilization of dynamic resistance exercise to control and build up one's muscle. If you happen to participate in this action, you sir are alluded to as a bodybuilder. Now, you may think it's as simple as lifting weights and consuming high amounts of protein, but there's a lot more to it than you think...</p>
+            <a class="btn-2" href="bodybuilding.html">READ MORE</a>
+          </div>
+        </div>
+        <div class="slide">
+          <div>
+            <div class="border"></div>
+            <h2>workout plans</h2>
+            <p>Go into your workout prepared with the workout plans lift has to offer for a more organised and efficient session to achieve the results you want. our plans range with various training methods including Hypertrophy and Progressive Overload. we've also considered equipment constraints too.</p>
+            <a class="btn-3" href="goal.html">READ MORE</a>
+          </div>
         </div>
       </div>
     </div>
-  </header>
+  </section>
+
+  <section class="light-grey">
+    <div class="container">
+      <div class="row column-row">
+        <div class="col-sm-4">
+          <div class="icon-wrap">
+            <img src="img/animat-customize.gif" alt="toggles">
+          </div>
+          <div class="column-content">
+            <h4>Calculate Nutrition</h4>
+            <p>Fine tune filters to mach your needs and be bestowed with the numeric values you'll require in order to satisfy your goal. We have a range of calculators for you to use and discover the nutrients and colories you need with some extras. <a href="calculator.html"><b>Try them out!</b></a></p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="icon-wrap">
+            <img src="img/animat-responsive.gif" alt="Devices">
+          </div>
+          <div class="column-content">
+            <h4>Anywhere and Everywhere</h4>
+            <p>Carry your plan wherever you go. Lift is a responsive site so you can easily take advantage as you would on the computer. As a bonus, you can view, print and download a wide range of workout concepts as a PDF file so you can still workout offline.</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="icon-wrap">
+            <img src="img/animat-calendar.gif" alt="Calendar">
+          </div>
+          <div class="column-content">
+            <h4>Workout Plans</h4>
+            <p>We provide a handfull of workout plans for you guys to follow. The plans provide meal concepts with the ingredients listed as well as accurate calorie references too. To top that off, each workout is available to download. <a href="goal.html"><b>Show me!</b></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="pg-background position" style="background-image:url(img/figure2.jpg);">
+      <div class="slide-wrapper sc-slide-wrap full-height width left">
+        <div class="slide-content sc-slide margin max-width">
+          <div class="slide">
+            <div class="border"></div>
+            <h2>rookie member?</h2>
+            <p>If you're a little new to the game, don't worry. You can head on over to the bodybuilding page where some important topics are explained. This is great if you're not too familiar with the terminology, or anything regarding your training... Here we run through some important factors to consider when training and can be quite beneficial to know.</p>
+            <a class="btn-3" href="bodybuilding.html">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="light-grey">
+    <div class="container">
+      <div class="row column-row">
+        <div class="col-sm-6">
+          <div class="slide">
+            <div class="border"></div>
+            <h4>join the newsletter</h4>
+            <p>Be one of the first to hear from us regarding important news and tips and tricks you can use in your training. We'll try not to send you any garbage &#x1F601; only the good stuff. What do you say? </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="column-content form-container">
+            <form class="form">
+          		<input type="email" class="form__field" placeholder="Your E-Mail Address"/>
+            	<button disabled type="submit" class="submit-btn btn--primary btn--inside">Subscribe</button>
+        		</form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bodybuilding.html">BodyBuilding</a></li>
+          <li><a href="goal.html">YourGoal</a></li>
+          <li><a href="calculator.html">Calculators</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footicon">
+        <a href="https://callumcolley.github.io/" target="_blank"><img src="img/favicon2.png" alt="Powered by: Callum Colley"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loader -->
+  <div id="loader-wrapper">
+    <div class="logo">
+      <img src="img/logo.png">
+    </div>
+    <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+  </div>
+
+  <!--Scripts-->
 
   <!--Jquery-->
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
   <script src="js/jquery.js"></script>
 
   <!--Bootstrap-->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-  crossorigin="anonymous">
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-  crossorigin="anonymous"></script>
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+  $(document).ready(function() {
+    $(".div-carousel > div:gt(0)").hide();
+    setInterval(function() {
+      $(".div-carousel > div:first")
+        .fadeOut(1000)
+        .next()
+        .delay(2000)
+        .fadeIn(1000)
+        .end()
+        .appendTo(".div-carousel");
+    }, 15000);
+  });
+  </script>
 </body>
 </html>

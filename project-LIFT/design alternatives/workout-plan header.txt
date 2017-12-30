@@ -1,0 +1,1 @@
+        <div class="img-ban" style="background-image:url(img/musclestrength2.jpg)"></div>

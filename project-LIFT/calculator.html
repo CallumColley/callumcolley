@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lift | Calculation Central</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link href="img/favicon.png" rel="shortcut icon" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!--mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img alt="LIFT." src="img/logo2.png">
+          </a>
+        </div>
+        <!--normal display-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html" class="indi">Home.</a></li>
+            <li><a href="bodybuilding.html" class="indi">BodyBuilding.</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle indi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Goal <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <li><a class="sweep-right" href="leanmuscle.html"><span class="num">01</span>LEAN MUSCLE</a></li>
+                      <li><a class="sweep-right" href="muscleandstrength.html"><span class="num">02</span>MUSCLE AND STRENGTH</a></li>
+                    </div>
+                    <div class="col-sm-12">
+                      <li><a class="sweep-right" href="dietandweightloss.html"><span class="num">03</span>DIET AND WEIGHT LOSS</a></li>
+                      <li><a class="sweep-right" href="sportsperformance.html"><span class="num">04</span>SPORTS PERFORMANCE</a></li>
+                    </div>
+                  </div>
+                </ul>
+                <ul class="dropdown-menu mobile">
+                  <li><a href="leanmuscle.html">LEAN MUSCLE</a></li>
+                  <li><a href="muscleandstrength.html">MUSCLE AND STRENGTH</a></li>
+                  <li><a href="dietandweightloss.html">DIET AND WEIGHT LOSS</a></li>
+                  <li><a href="sportsperformance.html">SPORTS PERFORMANCE</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html" class="indi">About.</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!---Start of Page---------->
+
+  <div id="content">
+    <section class="page-header">
+      <div class="contain">
+        <div class="icon-container">
+          <div class="block">
+            <div class="icon multiply">
+              <img src="img/1.png" alt="multiply icon" />
+            </div>
+            <div class="icon divide">
+              <img src="img/2.png" alt="divide icon" />
+            </div>
+          </div>
+          <div class="block">
+            <div class="icon plus">
+              <img src="img/3.png" alt="plus icon" />
+            </div>
+            <div class="icon equal">
+              <img src="img/4.png" alt="equals icon" />
+            </div>
+          </div>
+        </div>
+        <div class="head-txt-wrap">
+          <div class="head-txt">
+            <h2>calculator</h2>
+            <h2>central</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="nav-padding nutrient">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="col-head">
+              <div class="pg-background position" style="background-image:url(img/figure3.jpg);">
+                <div class="slide-wrapper full-height left">
+                  <div class="slide-content">
+                    <div class="border"></div>
+                    <h3>Calculate the nutrients you need</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn-toggle expand-txt" type="button" name="button"> information<span class="caret"></span></button>
+            <div class="info-wrap">
+              <h4 class="sub-title">how does this work?</h4>
+              <p>This calorie calculator works by estimating your day by day energy consumption and measures it against your selected objective. Now, obviously not every person needs 2,000 calories per day. Your necessities are exceptionally individual and dictated by substantially more than your exercises. Utilize this calculator to discover what amount of calories you truly require.</p>
+              <h4 class="sub-title">protein</h4>
+              <p>Protein is an absolute essential in bodybuilding as this is the key to gains! A constant supply of Protein throughout the day is important for optimum muscle growth. Protein is composed by amino acids which is the foundation of your muscles and body. Without them, it would be impossible to build, repair or even maintain muscle tissue.</p>
+              <p>Protein is also made up of Carbon, Hydrogen, Oxygen and Nitrogen. Having a sufficient amount of protein will put you in a anabolic state that'll allow you to build muscle. On the other hand, if you don't consume an ample amount of protein this could result in you being in a catabolic state. This causes your body to break down your muscles for a source of energy.</p>
+              <h4 class="sub-title">carbohydrates</h4>
+              <p>Carbohydrates play an important role for bodybuilders. They give the body energy to deal with the rigors of training and recovery. carbohydrates also promote insulin, a hormone enabling cells to get the glucose they need. Insulin also carries amino acids into cells and promotes protein synthesis which is imperative if your goal is to increase muscle mass.</p>
+              <h4 class="sub-title">fat</h4>
+              <p>Packing nine calories per gram, fat is a more concentrated source of energy than both protein and carbohydrates. In order to gain mass, as many bodybuilders are doing, you need to be in a caloric surplus. In other words, you need to be consuming more calories than you're burning and the additional calories will be used to, in this case, store fat. In other cases, the extra energy can be used to build muscle.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div id="DPG">
+              <div id="test-hidden">
+                <div class="dpg-calculator calorie-calculator fat-calculator carb-calculator protein-calculator">
+                  <div class="calc-container">
+                    <div class="age-wrap">
+                      <span class="calc-subheader">Age</span>
+                      <div class="calc-row">
+                        <input type="text" class="bbTextBox calc-textbox" name="age" placeholder="Years" value="">
+                      </div>
+                    </div>
+                    <div class="gender-wrap">
+                      <span class="calc-subheader">Sex</span>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-male fat-male carb-male protein-male" name="sex" value="M" checked="">
+                        <label class="calc-label-small" for="calorie-male fat-male carb-male protein-male"><span></span>Male</label>
+                        <input type="radio" class="calc-float-right" id="calorie-female fat-female carb-female protein-female" name="sex" value="F">
+                        <label class="calc-label-small calc-float-right" for="calorie-female fat-female carb-female protein-female"><span></span>Female</label>
+                      </div>
+                    </div>
+                    <div class="height-wrap">
+                      <span class="calc-subheader">Height</span>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-feet fat-feet carb-feet protein-feet" name="height-system" value="feet" checked="">
+                        <label class="calc-label-small" for="calorie-feet fat-feet carb-feet protein-feet"><span></span>Feet</label>
+                        <input type="radio" class="calc-float-right" id="calorie-meters fat-meters carb-meters protein-meters" name="height-system" value="meters">
+                        <label class="calc-label-small calc-float-right" for="calorie-meters fat-meters carb-meters protein-meters"><span></span>Meters</label>
+                      </div>
+                      <div class="calc-row">
+                        <input type="text" class="bbTextBox calc-textbox-half" name="height-tens" placeholder="Feet" value="">
+                        <input type="text" class="bbTextBox calc-textbox-half" name="height-units" placeholder="Inches" value="">
+                      </div>
+                    </div>
+                    <div class="weight-wrap">
+                      <span class="calc-subheader">Weight</span>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-pounds fat-pounds carb-pounds protein-pounds" name="weight-system" value="pounds" checked="">
+                        <label class="calc-label-small" for="calorie-pounds fat-pounds carb-pounds protein-pounds"><span></span>Pounds</label>
+                        <input type="radio" class="calc-float-right" id="calorie-kilos fat-kilos carb-kilos protein-kilos" name="weight-system" value="kilos">
+                        <label class="calc-label-small calc-float-right" for="calorie-kilos fat-kilos carb-kilos protein-kilos"><span></span>Kilograms</label>
+                      </div>
+                      <div class="calc-row">
+                        <input type="text" name="weight" class="bbTextBox calc-textbox" placeholder="Pounds">
+                      </div>
+                    </div>
+                    <div class="goal-wrap">
+                      <span class="calc-subheader">Goal</span>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-goal1 fat-goal1 carb-goal1 protein-goal1" name="goal" value="fat-loss" checked="">
+                        <label class="calc-label" for="calorie-goal1 fat-goal1 carb-goal1 protein-goal1"><span></span>Fat Loss</label>
+                      </div>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-goal2 fat-goal2 carb-goal2 protein-goal2" name="goal" value="maintenance">
+                        <label class="calc-label" for="calorie-goal2 fat-goal2 carb-goal2 protein-goal2"><span></span>Maintenance</label>
+                      </div>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-goal3 fat-goal3 carb-goal3 protein-goal3" name="goal" value="gainz">
+                        <label class="calc-label" for="calorie-goal3 fat-goal3 carb-goal3 protein-goal3"><span></span>Muscle Gainz</label>
+                      </div>
+                    </div>
+                    <div class="active-wrap">
+                      <span class="calc-subheader">Activity Level</span>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-activity1 fat-activity1 carb-activity1 protein-activity1" name="activity" value="L" checked="">
+                        <label class="calc-label" for="calorie-activity1 fat-activity1 carb-activity1 protein-activity1"><span></span>Lightly active (moderate exercise but inactive job)</label>
+                      </div>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-activity2 fat-activity2 carb-activity2 protein-activity2" name="activity" value="M">
+                        <label class="calc-label" for="calorie-activity2 fat-activity2 carb-activity2 protein-activity2"><span></span>Moderately active (intense exercise but inactive job)</label>
+                      </div>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-activity3 fat-activity3 carb-activity3 protein-activity3" name="activity" value="V">
+                        <label class="calc-label" for="calorie-activity3 fat-activity3 carb-activity3 protein-activity3"><span></span>Very active (moderate exercise and active job)</label>
+                      </div>
+                      <div class="calc-row">
+                        <input type="radio" id="calorie-activity4 fat-activity4 carb-activity4 protein-activity4" name="activity" value="E">
+                        <label class="calc-label" for="calorie-activity4 fat-activity4 carb-activity4 protein-activity4"><span></span>Extra active (intense exercise and active job)</label>
+                      </div>
+                    </div>
+                    <button class="bb-flat-btn calc-submit" type="button">Calculate</button>
+                    <h3 class="dpg-h3 calc-caloric-answer" style="display: none;"><div>Daily Calorie Target: <span class="extra-condensed-regular"></span></div></h3>
+                    <h3 class="dpg-h3 calc-fat-answer" style="display: none;">Target Daily Fat Intake: <span class="extra-condensed-regular"></span></h3>
+                    <h3 class="dpg-h3 calc-carb-answer" style="display: none;">Target Daily Carb Intake: <span class="extra-condensed-regular"></span></h3>
+                    <h3 class="dpg-h3 calc-protein-answer" style="display: none;">Target Daily Protein Intake: <span class="extra-condensed-regular"></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="water">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="col-head">
+              <div class="pg-background position" style="background-image:url(img/water-jugs.jpg);">
+                <div class="slide-wrapper full-height left">
+                  <div class="slide-content">
+                    <div class="border"></div>
+                    <h3>Calculate your water intake</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn-toggle expand-txt" type="button" name="button"> information<span class="caret"></span></button>
+            <div class="info-wrap">
+              <h4 class="sub-title">Why do I need water?</h4>
+              <p>Water consumption is absolutely essential and is as equally important as the nutrients above, but one of the most overlooked. One of the greatest portion of our body weight is made up of water, at around 65-70%. Water flushes metabolic waste products and regulates all body functions as well as help your kidneys work their magic.</p>
+              <p>Most importantly, major decreases in performance can occur due to even slight dehydration, impacting your athletic potential. If your body isn't getting the fluids it needs, you won't be able to push hard in the gym and achieve your goal.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div id="DPG">
+              <div class="dpg-calculator water-calculator">
+                <div class="calc-container"><span class="calc-subheader">Weight</span>
+                  <div class="calc-row">
+                    <input type="radio" id="water-pounds" name="weight-system2" value="pounds" checked="checked">
+                    <label class="calc-label-small" for="water-pounds"><span></span>Pounds</label>
+                    <input type="radio" id="water-kilos" name="weight-system2" value="kilos">
+                    <label class="calc-label-small calc-float-right" for="water-kilos"><span></span>Kilograms</label>
+                  </div>
+                  <div class="calc-row">
+                    <input type="text" name="weight" class="bbTextBox calc-textbox" placeholder="Pounds">
+                  </div>
+                  <span class="calc-subheader">Workout Duration</span>
+                  <div class="calc-row">
+                    <input type="radio" id="water-activity1" name="activity2" value="L" checked="checked">
+                    <label class="calc-label" for="water-activity1"><span></span>Less than an hour</label>
+                  </div>
+                  <div class="calc-row">
+                    <input type="radio" id="water-activity2" name="activity2" value="M">
+                    <label class="calc-label" for="water-activity2"><span></span>One hour</label>
+                  </div>
+                  <div class="calc-row">
+                    <input type="radio" id="water-activity3" name="activity2" value="V">
+                    <label class="calc-label" for="water-activity3"><span></span>More than an hour</label>
+                  </div>
+                  <button class="bb-flat-btn calc-submit" type="button">Calculate</button>
+                  <h3 class="dpg-h3 calc-water-answer"></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="lbm-section">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="col-head">
+              <div class="pg-background position" style="background-image:url(img/figure4.jpg);">
+                <div class="slide-wrapper full-height left">
+                  <div class="slide-content">
+                    <div class="border"></div>
+                    <h3>Calculate lean body mass</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn-toggle expand-txt" type="button" name="button"> information<span class="caret"></span></button>
+            <div class="info-wrap">
+              <h4 class="sub-title">What's lean body mass?</h4>
+              <p>Your lean body mass is the amount of weight your body holds that isn't fat. The goal of any bodybuilder or fitness fanatic is to lose weight whilst maintaining their lean body mass, so essentially it's just decreasing your body fat percentage.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div id="DPG">
+              <div class="dpg-calculator lbm-calculator">
+                <div class="calc-container"><span class="calc-subheader">Weight</span>
+                  <div class="calc-row">
+                    <input id="lbm-pounds" name="weight-system3" value="pounds" checked="checked" type="radio">
+                    <label class="calc-label-small" for="lbm-pounds"><span></span>Pounds</label>
+                    <input id="lbm-kilos" name="weight-system3" value="kilos" type="radio">
+                    <label class="calc-label-small calc-float-right" for="lbm-kilos"><span></span>Kilograms</label>
+                  </div>
+                  <div class="calc-row">
+                    <input name="weight" class="bbTextBox calc-textbox" placeholder="Pounds" type="text">
+                  </div>
+                  <span class="calc-subheader">Body Fat Percentage</span>
+                  <div class="calc-row">
+                    <input name="bodyfat" class="bbTextBox calc-textbox" placeholder="Body Fat %" type="text">
+                  </div>
+                  <button class="bb-flat-btn calc-submit" type="button">Calculate</button>
+                  <h3 class="dpg-h3 calc-answer"></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <ul class="footer-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="bodybuilding.html">BodyBuilding</a></li>
+              <li><a href="goal.html">YourGoal</a></li>
+              <li><a href="calculator.html">Calculators</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+          <div class="footicon">
+            <a href="https://callumcolley.github.io/" target="_blank"><img src="img/favicon2.png" alt="Powered by: Callum Colley"></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+  <!--Scripts-->
+
+  <!--Jquery-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+  </script>
+  <script src="js/jquery.js"></script>
+
+  <!--Bootstrap-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous">
+  </script>
+  <script>
+  // Math symbol randomizer
+  function init() {
+    "use strict";
+    function select(a) {
+      return document.querySelector(a);
+    }
+    var randomNum = Math.floor(Math.random() * 24 + 1),
+      multiply = select(".multiply img"),
+      divide = select(".divide img"),
+      plus = select(".plus img"),
+      equal = select(".equal img"),
+      link = "img/",
+      order = [
+        [1, 2, 3, 4],
+        [1, 2, 4, 3],
+        [1, 3, 2, 4],
+        [1, 3, 4, 2],
+        [1, 4, 2, 3],
+        [1, 4, 3, 2],
+        [2, 1, 3, 4],
+        [2, 1, 4, 3],
+        [2, 3, 1, 4],
+        [2, 3, 4, 1],
+        [2, 4, 1, 3],
+        [2, 4, 3, 1],
+        [3, 1, 2, 4],
+        [3, 1, 4, 2],
+        [3, 2, 1, 4],
+        [3, 2, 4, 1],
+        [3, 4, 1, 2],
+        [3, 4, 2, 1],
+        [4, 1, 2, 3],
+        [4, 1, 3, 2],
+        [4, 2, 1, 3],
+        [4, 2, 3, 1],
+        [4, 3, 1, 2],
+        [4, 3, 2, 1]
+      ];
+
+    multiply.src = link + order[randomNum][0] + ".png";
+    divide.src = link + order[randomNum][1] + ".png";
+    plus.src = link + order[randomNum][2] + ".png";
+    equal.src = link + order[randomNum][3] + ".png";
+  }
+  window.setInterval(init, 2000);
+  </script>
+</body>
+</html>
