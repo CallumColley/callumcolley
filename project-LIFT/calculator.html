@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link href="img/favicon.png" rel="shortcut icon" type="image/png">
+  <link href="img/icons/favicon.png" rel="shortcut icon" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html">
-            <img alt="LIFT." src="img/logo2.png">
+            <img alt="LIFT." src="img/icons/logo2.png">
           </a>
         </div>
         <!--normal display-->
@@ -68,18 +68,18 @@
         <div class="icon-container">
           <div class="block">
             <div class="icon multiply">
-              <img src="img/1.png" alt="multiply icon" />
+              <img src="icons/1.png" alt="multiply icon" />
             </div>
             <div class="icon divide">
-              <img src="img/2.png" alt="divide icon" />
+              <img src="img/icons/2.png" alt="divide icon" />
             </div>
           </div>
           <div class="block">
             <div class="icon plus">
-              <img src="img/3.png" alt="plus icon" />
+              <img src="img/icons/3.png" alt="plus icon" />
             </div>
             <div class="icon equal">
-              <img src="img/4.png" alt="equals icon" />
+              <img src="img/icons/4.png" alt="equals icon" />
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="col-head">
-              <div class="pg-background position" style="background-image:url(img/figure3.jpg);">
+              <div class="pg-background position" style="background-image:url(img/banners/figure3.jpg);">
                 <div class="slide-wrapper full-height left">
                   <div class="slide-content">
                     <div class="border"></div>
@@ -215,7 +215,7 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="col-head">
-              <div class="pg-background position" style="background-image:url(img/water-jugs.jpg);">
+              <div class="pg-background position" style="background-image:url(img/banners/water-jugs.jpg);">
                 <div class="slide-wrapper full-height left">
                   <div class="slide-content">
                     <div class="border"></div>
@@ -272,7 +272,7 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="col-head">
-              <div class="pg-background position" style="background-image:url(img/figure4.jpg);">
+              <div class="pg-background position" style="background-image:url(img/banners/figure4.jpg);">
                 <div class="slide-wrapper full-height left">
                   <div class="slide-content">
                     <div class="border"></div>
@@ -326,7 +326,7 @@
             </ul>
           </div>
           <div class="footicon">
-            <a href="https://callumcolley.github.io/" target="_blank"><img src="img/favicon2.png" alt="Powered by: Callum Colley"></a>
+            <a href="https://callumcolley.github.io/" target="_blank"><img src="img/icons/favicon2.png" alt="Powered by: Callum Colley"></a>
           </div>
         </div>
       </footer>
@@ -354,50 +354,9 @@
   </script>
   <script>
   // Math symbol randomizer
-  function init() {
-    "use strict";
-    function select(a) {
-      return document.querySelector(a);
-    }
-    var randomNum = Math.floor(Math.random() * 24 + 1),
-      multiply = select(".multiply img"),
-      divide = select(".divide img"),
-      plus = select(".plus img"),
-      equal = select(".equal img"),
-      link = "img/",
-      order = [
-        [1, 2, 3, 4],
-        [1, 2, 4, 3],
-        [1, 3, 2, 4],
-        [1, 3, 4, 2],
-        [1, 4, 2, 3],
-        [1, 4, 3, 2],
-        [2, 1, 3, 4],
-        [2, 1, 4, 3],
-        [2, 3, 1, 4],
-        [2, 3, 4, 1],
-        [2, 4, 1, 3],
-        [2, 4, 3, 1],
-        [3, 1, 2, 4],
-        [3, 1, 4, 2],
-        [3, 2, 1, 4],
-        [3, 2, 4, 1],
-        [3, 4, 1, 2],
-        [3, 4, 2, 1],
-        [4, 1, 2, 3],
-        [4, 1, 3, 2],
-        [4, 2, 1, 3],
-        [4, 2, 3, 1],
-        [4, 3, 1, 2],
-        [4, 3, 2, 1]
-      ];
-
-    multiply.src = link + order[randomNum][0] + ".png";
-    divide.src = link + order[randomNum][1] + ".png";
-    plus.src = link + order[randomNum][2] + ".png";
-    equal.src = link + order[randomNum][3] + ".png";
-  }
-  window.setInterval(init, 2000);
+  function init(){"use strict";function select(a){return document.querySelector(a)}
+var randomNum=Math.floor(Math.random()*24+1),multiply=select(".multiply img"),divide=select(".divide img"),plus=select(".plus img"),equal=select(".equal img"),link="img/icons/",order=[[1,2,3,4],[1,2,4,3],[1,3,2,4],[1,3,4,2],[1,4,2,3],[1,4,3,2],[2,1,3,4],[2,1,4,3],[2,3,1,4],[2,3,4,1],[2,4,1,3],[2,4,3,1],[3,1,2,4],[3,1,4,2],[3,2,1,4],[3,2,4,1],[3,4,1,2],[3,4,2,1],[4,1,2,3],[4,1,3,2],[4,2,1,3],[4,2,3,1],[4,3,1,2],[4,3,2,1]];multiply.src=link+order[randomNum][0]+".png";divide.src=link+order[randomNum][1]+".png";plus.src=link+order[randomNum][2]+".png";equal.src=link+order[randomNum][3]+".png"}
+window.setInterval(init,2000)
   </script>
 </body>
 </html>

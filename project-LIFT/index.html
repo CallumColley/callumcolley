@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link href="img/favicon.png" rel="shortcut icon" type="image/png">
+  <link href="img/icons/favicon.png" rel="shortcut icon" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html">
-            <img alt="LIFT." src="img/logo2.png">
+            <img alt="LIFT." src="img/icons/logo2.png">
           </a>
         </div>
         <!--normal display-->
@@ -63,7 +63,7 @@
   <!---Start of Home---------->
 
   <section class="full-height">
-    <div class="pg-background" style="background-image:url(img/dumbbell.png)"></div>
+    <div class="pg-background" style="background-image:url(img/backgrounds/dumbbell.png)"></div>
     <div class="slide-wrapper full-height width">
       <div class="slide-content margin max-width div-carousel">
         <div class="slide">
@@ -99,7 +99,7 @@
       <div class="row column-row">
         <div class="col-sm-4">
           <div class="icon-wrap">
-            <img src="img/animat-customize.gif" alt="toggles">
+            <img src="img/gifs/animat-customize.gif" alt="toggles">
           </div>
           <div class="column-content">
             <h4>Calculate Nutrition</h4>
@@ -108,7 +108,7 @@
         </div>
         <div class="col-sm-4">
           <div class="icon-wrap">
-            <img src="img/animat-responsive.gif" alt="Devices">
+            <img src="img/gifs/animat-responsive.gif" alt="Devices">
           </div>
           <div class="column-content">
             <h4>Anywhere and Everywhere</h4>
@@ -117,7 +117,7 @@
         </div>
         <div class="col-sm-4">
           <div class="icon-wrap">
-            <img src="img/animat-calendar.gif" alt="Calendar">
+            <img src="img/gifs/animat-calendar.gif" alt="Calendar">
           </div>
           <div class="column-content">
             <h4>Workout Plans</h4>
@@ -129,7 +129,7 @@
   </section>
 
   <section>
-    <div class="pg-background position" style="background-image:url(img/figure2.jpg);">
+    <div class="pg-background position" style="background-image:url(img/banners/figure2.jpg);">
       <div class="slide-wrapper sc-slide-wrap full-height width left">
         <div class="slide-content sc-slide margin max-width">
           <div class="slide">
@@ -176,7 +176,7 @@
         </ul>
       </div>
       <div class="footicon">
-        <a href="https://callumcolley.github.io/" target="_blank"><img src="img/favicon2.png" alt="Powered by: Callum Colley"></a>
+        <a href="https://callumcolley.github.io/" target="_blank"><img src="img/icons/favicon2.png" alt="Powered by: Callum Colley"></a>
       </div>
     </div>
   </footer>
@@ -184,7 +184,7 @@
   <!-- Loader -->
   <div id="loader-wrapper">
     <div class="logo">
-      <img src="img/logo.png">
+      <img src="img/icons/logo.png">
     </div>
     <div id="loader"></div>
       <div class="loader-section section-left"></div>
@@ -213,18 +213,7 @@
   </script>
 
   <script>
-  $(document).ready(function() {
-    $(".div-carousel > div:gt(0)").hide();
-    setInterval(function() {
-      $(".div-carousel > div:first")
-        .fadeOut(1000)
-        .next()
-        .delay(2000)
-        .fadeIn(1000)
-        .end()
-        .appendTo(".div-carousel");
-    }, 15000);
-  });
+  $(document).ready(function(){$(".div-carousel > div:gt(0)").hide();setInterval(function(){$(".div-carousel > div:first").fadeOut(1000).next().delay(2000).fadeIn(1000).end().appendTo(".div-carousel")},15000)})
   </script>
 </body>
 </html>
