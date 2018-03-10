@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>StreetScene | Spots</title>
+  <link rel="shortcut icon" href=".ico">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="animate.cs">
+
+</head>
+
+<body>
+  <!--Page background-->
+  <div class="reg-background"></div>
+
+  <!--Side pannel-->
+  <aside class="pannel mainPannel bounceBackRight">
+    <div class="inner">
+      <div class="burgerWrap">
+        <button id="burger" type="button" name="button"> <img src="img/icons/menu.png" alt="Open Menu"> <img class="hide" src="img/icons/backburger.png" alt="Close Menu"> </button>
+      </div>
+      <!--Navigation-->
+      <nav>
+        <ul>
+          <li><a href="index.html">home <span><img src="img/icons/home.png" alt="home"></span></a><a class="mobileBtn" href="index.html"><span><img src="img/icons/home.png" alt="home"></span></a></li>
+          <li><a href="#" class="category">category<span><img src="img/icons/category.png" alt="category"></span></a><a id="category"class="mobileBtn" href="#" class="category"><span><img src="img/icons/category.png" alt="category"></span></a></li>
+          <!--Dropdown-->
+          <ul class="categoryDropdown hide">
+            <li><a href="#">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
+            <li><a href="#">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
+            <li><a href="#">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
+          </ul>
+          <li><a href="#" class="spot">spots <span><img src="img/icons/pin.png" alt="locations"></span></a><a id="spots"class="mobileBtn" href="#" class="spot"><span><img src="img/icons/pin.png" alt="locations"></span></a></li>
+          <!--Dropdown-->
+          <ul class="spotDropdown hide">
+            <li><a href="#">find spot <span><img src="img/icons/search.png" alt="find spot"></span></a></li>
+            <li><a href="#">add spot <span><img src="img/icons/plus.png" alt="add spot"></span></a></li>
+            <li><a href="#">favourites <span><img src="img/icons/star.png" alt="favourites"></span></a></li>
+          </ul>
+          <li><a href="about.html">about <span><img src="img/icons/info.png" alt="about"></span></a><a class="mobileBtn" href="about.html"><span><img src="img/icons/info.png" alt="about"></span></a></li>
+        </ul>
+      </nav>
+      <div class="social">
+        <a class="facebookBtn smGlobalBtn" href="#"></a>
+        <a class="twitterBtn smGlobalBtn" href="#"></a>
+        <a class="pinterestBtn smGlobalBtn" href="#"></a>
+      </div>
+    </div>
+  </aside>
+
+  <!--Main content-->
+  <div id="mainContent" class="mainContent">
+    <!--Page header-->
+    <header class="smaller">
+      <div id="logoAnim" class="logoWrap">
+        <div class="logo">
+          <img src="img/icons/logo.png" alt="StreetScene">
+        </div>
+      </div>
+    </header>
+    <!--Google Map-->
+    <div id="map"></div>
+    <!--Side Menu-->
+    <aside id="spotMenu" class="spotMenu">
+      <header>
+
+      </header>
+      <ul id="places"></ul>
+      <!--Open and close btns-->
+      <div id="open" class="menubtn openbtn" onclick="openNav()">
+        <span class="tooltip">Expand side menu</span>
+      </div>
+      <div id="close" class="menubtn closebtn invisible" onclick="closeNav()">
+        <span class="tooltip">Collapse side menu</span>
+      </div>
+    </aside>
+  </div>
+
+
+  <script>
+  function openNav() {
+      document.getElementById("spotMenu").style.width = "350px";
+      document.getElementById("map").style.marginRight = "350px";
+      document.getElementById("open").style.marginRight = "350px";
+      document.getElementById("close").style.marginRight = "350px";
+  }
+
+  function closeNav() {
+      document.getElementById("spotMenu").style.width = "0";
+      document.getElementById("map").style.marginRight = "0";
+      document.getElementById("open").style.marginRight = "0";
+      document.getElementById("close").style.marginRight = "0";
+  }
+  </script>
+
+
+
+
+  <!--Scripts-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <!--GoogleMaps-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8DHt3YTwsj69q0RGe-YgQt5trWIky4gc&libraries=places&callback=initMap" async defer></script>
+
+</body>
+
+</html>
