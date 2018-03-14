@@ -77,8 +77,8 @@ $(document).on("click", ".show-more, .show-less", function(e) {
   // Get parent based on click target
   let $parent = $(this).closest(".card");
   $parent
-      .toggleClass("card--small card--medium")
-      .find(".show-more, .show-less").toggleClass("hide");
+    .toggleClass("card--small card--medium")
+    .find(".show-more, .show-less").toggleClass("hide");
 });
 //Ripple onClick animation
 (function($, window, document, undefined) {
@@ -118,6 +118,8 @@ $(document).on("click", ".show-more, .show-less", function(e) {
 //API | GoogleMaps
 var map, infoWindow;
 var resultList = "";
+var markers = [];
+var renderObjects = [];
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -408,28 +410,103 @@ function initMap() {
         position: pos,
         map: map,
         title: 'You\'re here',
-        icon: '/home/callum/Desktop/test/img/icons/mapPin3.png' //Will change
+        icon: '/home/callum/Desktop/callumcolley.github.io/streetscene/img/icons/mapPin3.png' //Will change
       });
       infowindow = new google.maps.InfoWindow();
       var service = new google.maps.places.PlacesService(map);
-      //Request One
-      service.nearbySearch({
-        location: pos,
-        radius: 25000,
-        keyword: 'skate park',
-      }, callback);
-      //Request Two
-      service.nearbySearch({
-        location: pos,
-        radius: 25000,
-        keyword: 'bmx park',
-      }, callback);
 
       infoWindow.setPosition(pos);
       map.setCenter(pos);
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
+
+      // Skatepark Locations
+      if (document.URL.indexOf("spots.html#skateparks") >= 0) {
+        //Request One
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'skate park',
+        }, callback);
+        //Request Two
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'bmx park',
+        }, callback);
+      };
+      var skateparks = document.getElementById('skatepark');
+      skateparks.addEventListener("click", function(e) {
+        deleteMarkers();
+        clearRenderObjects();
+        //Request One
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'skate park',
+        }, callback);
+        //Request Two
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'bmx park',
+        }, callback);
+        infoWindow.setPosition(pos);
+        map.setCenter(pos);
+        map.setZoom(10);
+        //Removes generated html
+        $("#places").html("");
+      }, false);
+      // End of BMX & Skateboard location request
+
+      //MTB Locations
+      if (document.URL.indexOf("spots.html#mtb") >= 0) {
+        //Request One
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'mtb trail',
+        }, callback);
+        //Request Two
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'bmx track',
+        }, callback);
+        //Request Three
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'pump track',
+        }, callback);
+      };
+      var mtbtrails = document.getElementById('mtb');
+      mtbtrails.addEventListener("click", function(e) {
+        deleteMarkers();
+        clearRenderObjects();
+        //Request One
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'mtb trail',
+        }, callback);
+        //Request Two
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'bmx track',
+        }, callback);
+        //Request Three
+        service.nearbySearch({
+          location: pos,
+          radius: 25000,
+          keyword: 'pump track',
+        }, callback);
+        infoWindow.setPosition(pos);
+        map.setCenter(pos);
+        map.setZoom(10);
+        //Removes generated html
+        $("#places").html("");
+      }, false);
+      // End of MTB location request
 
 
 
@@ -438,78 +515,145 @@ function initMap() {
 
 
 
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+          'Error: The Geolocation service failed.' :
+          'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
 
+      function callback(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+          }
+        }
+      }
+      // Sets the map on all markers in the array.
+      function setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(map);
+        }
+      }
+
+      function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location,
+          animation: google.maps.Animation.DROP,
+          icon: '/home/callum/Desktop/callumcolley.github.io/streetscene/img/icons/mapPin.png', //Will change
+        });
+        markers.push(marker);
+
+        google.maps.event.addListener(marker, 'mouseover', function() {
+          var service = new google.maps.places.PlacesService(map);
+          var request = {
+            reference: place.reference
+          };
+          service.getDetails(request, function(details, status) {
+
+            infowindow.setContent([
+              '<strong>' + details.name + '</strong>',
+              details.formatted_address,
+              '<a href="https://www.google.co.uk/maps/place/' + details.formatted_address + '" target="_Blank">Open in Google Maps</a>',
+              'Rating:&nbsp;' + '<strong>' + details.rating + '</strong>',
+            ].join("<br />"));
+            infowindow.open(map, marker);
+          });
+        });
+        var service = new google.maps.places.PlacesService(map);
+        var request = {
+          reference: place.reference
+        };
+
+        setTimeout(function createCards() {
+          service.getDetails(request, function(details, status) {
+            if (status !== 'OK') {
+              setTimeout(function() {
+                createCards();
+              }, (0));
+            }
+            var placesList = document.getElementById('places');
+            placesList.innerHTML += '<div class="card card--small"><div class="card__image" style="background-image: url(' + place.photos[0].getUrl({maxWidth: 640}) + ');"></div><h2 class="card__title">' + details.name + '</h2><span class="card__subtitle link"><a href="https://www.google.co.uk/maps/place/' + details.formatted_address + '" target="_Blank">Open in Google Maps</a></span><div class="card__text"><p>' + details.formatted_address + '</p><p>' + details.formatted_address + '</p><p>' + details.formatted_address + '</p><p>' + details.formatted_address + '</p></div><div class="card__action-bar"><button class="card__button">SHARE</button><button class="card__button show-more">LEARN MORE</button><button class="card__button show-less hide">SHOW LESS</button></div></div>';
+          });
+          console.clear()
+        }, 0);
+
+
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+
+
+        directionsDisplay.setMap(map);
+        renderObjects.push(directionsDisplay);
+        directionsDisplay.setOptions({
+          suppressMarkers: true,
+          polylineOptions: {
+            strokeWeight: 4,
+            strokeOpacity: 1,
+            strokeColor: 'blue'
+          }
+        });
+
+        var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        google.maps.event.addListener(marker, 'click', onChangeHandler);
+
+
+
+
+        function calculateAndDisplayRoute(directionsService, directionsDisplay, place) {
+          directionsService.route({
+            origin: pos,
+            destination: marker.getPosition(),
+            travelMode: 'DRIVING'
+          }, function(response, status) {
+            if (status === 'OK') {
+              directionsDisplay.setDirections(response);
+            } else {
+              window.alert('Directions request failed due to ' + status);
+            }
+          });
+        }
+
+
+
+
+
+
+
+      }
+      // Removes the markers from the map, but keeps them in the array.
+      function clearMarkers() {
+        setMapOnAll(null);
+      }
+
+      // Deletes all markers in the array by removing references to them.
+      function deleteMarkers() {
+        clearMarkers();
+        markers = [];
+      }
+
+      // Removes directional routes
+      function clearRenderObjects() {
+        for(var i in renderObjects) {
+          renderObjects[i].setMap(null);
+        }
+      }
+
+
+
+
+
+
+
+
+    })
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
-  }
-} //End of Geolocation
-
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-    'Error: The Geolocation service failed.' :
-    'Error: Your browser doesn\'t support geolocation.');
-  infoWindow.open(map);
-}
-
-function callback(results, status) {
-  if (status === google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      createMarker(results[i]);
-    }
-  }
-}
-
-function createMarker(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location,
-    animation: google.maps.Animation.DROP,
-  });
-
-  google.maps.event.addListener(marker, 'click', function() {
-    var service = new google.maps.places.PlacesService(map);
-    var request = {
-      reference: place.reference
-    };
-    service.getDetails(request, function(details, status) {
-
-      infowindow.setContent([
-        '<strong>' + details.name + '</strong>',
-        details.formatted_address,
-        '<a href="https://www.google.co.uk/maps/place/' + details.formatted_address + '" target="_Blank">Open in Google Maps</a>',
-        'Rating:&nbsp;' + '<strong>' + details.rating + '</strong>',
-        details.formatted_phone_number
-      ].join("<br />"));
-      infowindow.open(map, marker);
-    });
-  });
-  var service = new google.maps.places.PlacesService(map);
-  var request = {
-    reference: place.reference
-  };
-
-
-  setTimeout(function createCards() {
-    service.getDetails(request, function(details, status) {
-      if (status !== 'OK') {
-        setTimeout(function() {
-          createCards();
-        }, (0));
-      }
-      var placesList = document.getElementById('places');
-      placesList.innerHTML += '<div class="card card--small"><div class="card__image" style="background-image: url(https://placeimg.com/640/480/nature);"></div><h2 class="card__title">' + details.name + '</h2><span class="card__subtitle"><a href="https://www.google.co.uk/maps/place/' + details.formatted_address + '" target="_Blank">Open in Google Maps</a></span><p class="card__text">Located two hours south of Sydney in the Southern Highland of New South Wales...</p><div class="card__action-bar"><button class="card__button">SHARE</button><button class="card__button show-more">LEARN MORE</button><button class="card__button show-less hide">SHOW LESS</button></div></div>';
-    });
-    console.clear()
-  }, 0);
-
-
-
-
-
-
-
-}
+  } // End of Geolocation
+} // End of Initialisation

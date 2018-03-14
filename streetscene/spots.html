@@ -28,14 +28,14 @@
       <nav>
         <ul>
           <li><a href="index.html">home <span><img src="img/icons/home.png" alt="home"></span></a><a class="mobileBtn" href="index.html"><span><img src="img/icons/home.png" alt="home"></span></a></li>
-          <li><a href="#" class="category">category<span><img src="img/icons/category.png" alt="category"></span></a><a id="category"class="mobileBtn" href="#" class="category"><span><img src="img/icons/category.png" alt="category"></span></a></li>
+          <li><a href="#" class="category">category<span><img src="img/icons/category.png" alt="category"></span></a><a id="category" class="mobileBtn" href="#" class="category"><span><img src="img/icons/category.png" alt="category"></span></a></li>
           <!--Dropdown-->
           <ul class="categoryDropdown hide">
             <li><a href="#">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
             <li><a href="#">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
             <li><a href="#">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
           </ul>
-          <li><a href="#" class="spot">spots <span><img src="img/icons/pin.png" alt="locations"></span></a><a id="spots"class="mobileBtn" href="#" class="spot"><span><img src="img/icons/pin.png" alt="locations"></span></a></li>
+          <li><a href="#" class="spot">spots <span><img src="img/icons/pin.png" alt="locations"></span></a><a id="spots" class="mobileBtn" href="#" class="spot"><span><img src="img/icons/pin.png" alt="locations"></span></a></li>
           <!--Dropdown-->
           <ul class="spotDropdown hide">
             <li><a href="#">find spot <span><img src="img/icons/search.png" alt="find spot"></span></a></li>
@@ -68,9 +68,19 @@
     <!--Side Menu-->
     <aside id="spotMenu" class="spotMenu">
       <header>
-
+        <div class="searchWrap">
+          <form id="search" class="initialSearch" onsubmit="return false">
+            <input id="searchBox" type="search" name="search" value="" placeholder="Enter a location...">
+          </form>
+          <div class="categorySelect">
+            <button type="button" name="skateparks" id="skatepark">skateparks</button>
+            <button type="button" name="mtbtrails" id="mtb">MTB Trails</button>
+          </div>
+        </div>
       </header>
-      <ul id="places"></ul>
+      <ul id="places">
+        <!--Location cards are placed here-->
+      </ul>
       <!--Open and close btns-->
       <div id="open" class="menubtn openbtn" onclick="openNav()">
         <span class="tooltip">Expand side menu</span>
@@ -83,19 +93,19 @@
 
 
   <script>
-  function openNav() {
+    function openNav() {
       document.getElementById("spotMenu").style.width = "350px";
       document.getElementById("map").style.marginRight = "350px";
       document.getElementById("open").style.marginRight = "350px";
       document.getElementById("close").style.marginRight = "350px";
-  }
+    }
 
-  function closeNav() {
+    function closeNav() {
       document.getElementById("spotMenu").style.width = "0";
       document.getElementById("map").style.marginRight = "0";
       document.getElementById("open").style.marginRight = "0";
       document.getElementById("close").style.marginRight = "0";
-  }
+    }
   </script>
 
 

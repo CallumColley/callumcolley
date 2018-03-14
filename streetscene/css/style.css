@@ -1067,9 +1067,9 @@ header.smaller {
 }
 .card__title {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   font-size: 24px;
   color: #FFF;
   margin: 0;
@@ -1106,18 +1106,13 @@ header.smaller {
 }
 .card__text {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   font-size: 14px;
   display: block;
-  left: 0;
-  right: 0;
-  top: 100px;
   padding: 16px;
   margin: 0;
-  line-height: 1.6;
-  position: absolute;
   color: #000;
   overflow: hidden;
   -webkit-transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -1153,9 +1148,7 @@ header.smaller {
 }
 .card--medium {
   -webkit-box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
-  height: 208px;
-  min-height: 208px;
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
 }
 .card--medium .card__image {
   border-radius: 1px 1px 0 0;
@@ -1167,20 +1160,21 @@ header.smaller {
 }
 .card--medium .card__title {
   color: #FF1744;
-  top: 16px;
+  top: 8px;
+  position: relative;
 }
 .card--medium .card__text {
-  font-size: 16px;
+  font-size: 11pt;
   top: 50px;
 }
 .card--medium .card__action-bar {
   left: 0;
+  position: initial;
 }
 .card--small {
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-  height: 136px;
-  min-height: 136px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  max-height: 136px;
 }
 .card--small .card__image {
   border-radius: 1px 0 0 1px;
@@ -1200,8 +1194,13 @@ header.smaller {
 }
 .card--small .card__subtitle {
   opacity: 1;
-  left: 88px;
+  left: 100px;
   z-index: 1;
+}
+.card--small .link {
+  background: url(../img/icons/open-in-new.png) no-repeat 2% 40%;
+  background-size: 20px;
+  padding-left:30px;
 }
 .card--small .card__text {
   top: 30px;
@@ -1634,10 +1633,30 @@ header.smaller {
   visibility: visible
 }
 
+.searchWrap {
+  display:flex;
+  flex-direction:column;
+  width:80%
+}
+
+.initialSearch {
+
+}
+
+.initialSearch [name="search"] {
+  width:100%;
+  padding:10px 5px;
+  font-size:11pt
+}
+
 .spotMenu header {
   height:100px;
   background-color: #4285F4;
-  margin-bottom:20px
+  margin-bottom:20px;
+  padding-top:0;
+  display:flex;
+  align-items:center;
+  justify-content:center
 }
 
 .gm-style-cc {
