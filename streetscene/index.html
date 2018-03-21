@@ -11,19 +11,21 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-  html, body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  body {
-    border-top: 7px solid;
-    border-bottom: 7px solid;
-  }
+    html,
+    body {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    body {
+      border-top: 7px solid;
+      border-bottom: 7px solid;
+    }
   </style>
 </head>
 
@@ -41,18 +43,18 @@
           <li><a href="#" class="category">category<span><img src="img/icons/category.png" alt="category"></span></a></li>
           <!--Dropdown-->
           <ul class="categoryDropdown hide">
-            <li><a href="#">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
-            <li><a href="#">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
-            <li><a href="#">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
+            <li><a href="spots.html#skateparks">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
+            <li><a href="spots.html#skateparks">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
+            <li><a href="spots.html#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
           </ul>
-          <li><a href="#" class="spot">spots <span><img src="img/icons/pin.png" alt="locations"></span></a></li>
-          <!--Dropdown-->
+          <li><a href="spots.html" class="spot">spots <span><img src="img/icons/pin.png" alt="locations"></span></a></li>
+          <!--Dropdown
           <ul class="spotDropdown hide">
             <li><a href="#">find spot <span><img src="img/icons/search.png" alt="find spot"></span></a></li>
             <li><a href="#">add spot <span><img src="img/icons/plus.png" alt="add spot"></span></a></li>
             <li><a href="#">favourites <span><img src="img/icons/star.png" alt="favourites"></span></a></li>
-          </ul>
-          <li><a href="about.html">about <span><img src="img/icons/info.png" alt="about"></span></a></li>
+          </ul>-->
+          <li><a href="#">about <span><img src="img/icons/info.png" alt="about"></span></a></li>
         </ul>
       </nav>
       <div class="message">
@@ -64,22 +66,10 @@
         <a class="pinterestBtn smGlobalBtn" href="#"></a>
       </div>
       <div class="footer">
-        Made with &#60;3 by <a target="_blank" href="http://callumcolley.github.io">Callum</a>
+        Made with&nbsp;<i class="heart"></i>&nbsp;by <a target="_blank" href="http://callumcolley.github.io">&nbsp;Callum</a>
       </div>
     </div>
   </aside>
-
-  <!--Top right bar-->
-  <div class="profileBar">
-    <div class="profile">
-      <div class="displayPic">
-        <img src="img/icons/profile.png" alt="display picture">
-      </div>
-      <div class="name">
-        <a href="#">login / signup</a>
-      </div>
-    </div>
-  </div>
 
   <!--Panneled background-->
   <div class="home-wrapper">
@@ -108,14 +98,6 @@
       </a>
     </div>
   </div>
-
-
-
-
-
-
-
-
 
   <!--Scripts-->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
