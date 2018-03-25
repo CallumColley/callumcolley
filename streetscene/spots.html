@@ -31,7 +31,7 @@
       <!--Navigation-->
       <nav>
         <ul>
-          <li><a href="index.html">home <span><img src="img/icons/home.png" alt="home"></span></a></li>
+          <li><a href="index.html">home<span><img src="img/icons/home.png" alt="home"></span></a></li>
           <li><a class="category">category<span><img src="img/icons/category.png" alt="category"></span></a></li>
           <!--Dropdown-->
           <ul class="categoryDropdown hide">
@@ -57,34 +57,32 @@
     </div>
   </aside>
   <!--Mobile Nav-->
-  <nav class="mblNav">
-    <ul>
-      <li><a href="index.html"><img src="img/icons/home.png" alt="home"></a></li>
-      <li><a class="category"><img src="img/icons/category.png" alt="category"></a>
+  <nav class="mblNav pannel">
+    <div class="container">
+      <button type="button" name="burger"></button>
+      <button type="button" name="profile"></button>
+    </div>
+    <!--Menu-->
+    <ul class="dropdown">
+      <li><a href="index.html">home<img src="img/icons/home.png" alt="home"></a></li>
+      <li><a class="category">category<img src="img/icons/category.png" alt="category"></a></li>
         <!--Dropdown-->
         <ul class="categoryDropdown hide">
           <li><a href="spots.html#skateparks">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
           <li><a href="spots.html#skateparks">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
           <li><a href="spots.html#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
         </ul>
-      </li>
-      <li><a href="spots.html" class="spot"><img src="img/icons/pin.png" alt="locations"></a></li>
+      <li><a href="spots.html" class="spot">spots<img src="img/icons/pin.png" alt="locations"></a></li>
       <!--Dropdown-->
       <!-- <ul class="spotDropdown hide">
         <li><a href="#"><img src="img/icons/search.png" alt="find spot"></a></li>
         <li><a href="#"><img src="img/icons/plus.png" alt="add spot"></a></li>
         <li><a href="#"><img src="img/icons/star.png" alt="favourites"></a></li>
       </ul>-->
-      <li><a href="#"><img src="img/icons/info.png" alt="about"></a></li>
+      <li><a href="#">about<img src="img/icons/info.png" alt="about"></a></li>
     </ul>
-  </nav>
-
-  <!--Main content-->
-  <div id="mainContent" class="mainContent fd-row">
-    <header class="account">
-      <div class="userdp">
-        <img src="img/icons/profile.png" alt="user">
-      </div>
+    <!--Account/login/register-->
+    <div class="account">
       <!--<div class="details">
         <div class="usrName">John Doe</div>
         <button type="button" name="log-out">Log out</button>
@@ -120,7 +118,11 @@
           <button id="switch" type="button" name="regbtn">Register</button>
         </div>
       </div>
-    </header>
+    </div>
+  </nav>
+
+  <!--Main content-->
+  <div id="mainContent" class="mainContent fd-row">
     <!--Google Map-->
     <div id="map"></div>
     <!--Side Menu-->
