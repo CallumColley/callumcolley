@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>StreetScene</title>
+  <link rel="shortcut icon" href=".ico">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    html,
+    body {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    body {
+      border-top: 7px solid;
+      border-bottom: 7px solid;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Side pannel-->
+  <aside class="pannel">
+    <div class="inner">
+      <div class="logo">
+        <img src="img/icons/logo.png" alt="Street Scene" width="40%">
+      </div>
+      <!--Navigation-->
+      <nav>
+        <ul>
+          <li><a href="index.php">home<span><img src="img/icons/home.png" alt="home"></span></a></li>
+          <li><a href="#" class="category">category<span><img src="img/icons/category.png" alt="category"></span></a></li>
+          <!--Dropdown-->
+          <ul class="categoryDropdown hide">
+            <li><a href="spots.php#skateparks">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
+            <li><a href="spots.php#skateparks">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
+            <li><a href="spots.php#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
+          </ul>
+          <li><a href="spots.php" class="spot">spots <span><img src="img/icons/pin.png" alt="locations"></span></a></li>
+          <!--Dropdown
+          <ul class="spotDropdown hide">
+            <li><a href="#">find spot <span><img src="img/icons/search.png" alt="find spot"></span></a></li>
+            <li><a href="#">add spot <span><img src="img/icons/plus.png" alt="add spot"></span></a></li>
+            <li><a href="#">favourites <span><img src="img/icons/star.png" alt="favourites"></span></a></li>
+          </ul>-->
+          <li><a href="#">about <span><img src="img/icons/info.png" alt="about"></span></a></li>
+        </ul>
+      </nav>
+      <div class="message">
+        <p>Welcome to StreetScene. Here you can locate the ridable spots near you and sign up to start sharing some of the unique spots you've come across for others to enjoy.</p>
+      </div>
+      <div class="social">
+        <a class="facebookBtn smGlobalBtn" href="#"></a>
+        <a class="twitterBtn smGlobalBtn" href="#"></a>
+        <a class="pinterestBtn smGlobalBtn" href="#"></a>
+      </div>
+      <div class="footer">
+        Made with&nbsp;<i class="heart"></i>&nbsp;by <a target="_blank" href="http://callumcolley.github.io">&nbsp;Callum</a>
+      </div>
+    </div>
+  </aside>
+
+  <!--Panneled background-->
+  <div class="home-wrapper">
+    <div class="top">
+      <a href="spots.php#skateparks">
+        <div class="skateboard c-ripple js-ripple">
+          <span class="c-ripple__circle"></span>
+        </div>
+      </a>
+    </div>
+    <div class="middle">
+      <h1 class="title skateboarder">skateboarder</h1>
+      <h1 class="title bmx-rider">bmx rider</h1>
+      <h1 class="title trail-rider">trail rider</h1>
+      <a href="spots.php#skateparks" class="c-button">
+        <div class="bmx c-ripple js-ripple">
+          <span class="c-ripple__circle"></span>
+        </div>
+      </a>
+    </div>
+    <div class="bottom">
+      <a href="spots.php#mtb">
+        <div class="trail-bike c-ripple js-ripple">
+          <span class="c-ripple__circle"></span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!--Scripts-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
