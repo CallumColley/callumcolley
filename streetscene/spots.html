@@ -104,12 +104,12 @@
     <ul class="dropdown">
       <li><a href="index.html">home<img src="img/icons/home.png" alt="home"></a></li>
       <li><a class="category">category<img src="img/icons/category.png" alt="category"></a></li>
-        <!--Dropdown-->
-        <ul class="categoryDropdown hide">
-          <li><a href="spots.html#skateparks">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
-          <li><a href="spots.html#skateparks">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
-          <li><a href="spots.html#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
-        </ul>
+      <!--Dropdown-->
+      <ul class="categoryDropdown hide">
+        <li><a href="spots.html#skateparks">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
+        <li><a href="spots.html#skateparks">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
+        <li><a href="spots.html#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
+      </ul>
       <li><a href="spots.html" class="spot">spots<img src="img/icons/pin.png" alt="locations"></a></li>
       <!--Dropdown-->
       <!-- <ul class="spotDropdown hide">
@@ -163,17 +163,18 @@
   <div id="mainContent" class="mainContent fd-row">
     <!--Google Map-->
     <div id="map"></div>
+    <div id="matrix"></div>
     <!--Side Menu-->
     <aside id="spotMenu" class="spotMenu">
       <header>
         <div class="searchWrap">
-          <form class="initialSearch" onsubmit="">
+          <div class="initialSearch">
             <div class="searchBox">
-              <input id="search" type="search" name="search" value="" placeholder="Not available yet" />
-              <button id="search" type="submit" name="search"></button>
+              <input id="addressInput" type="text" name="search" placeholder="Search a place" />
+              <button id="searchButton" type="button" name="search"></button>
               <button id="geo" type="button" name="geo"></button>
             </div>
-          </form>
+          </div>
           <div class="trvlmWrap">
             <div class="trvlMode">
               <input id="selected" class="driving" type="button" name="car" value="DRIVING">
@@ -216,8 +217,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8DHt3YTwsj69q0RGe-YgQt5trWIky4gc&libraries=places&callback=initMap" async defer></script>
 
   <script>
-  function openNav(){if($(window).width()>440){document.getElementById("spotMenu").style.display="initial";setTimeout(function(){document.getElementById("spotMenu").style.transform="translateX(0px)";document.getElementById("map").style.marginRight="350px";document.getElementById("open").style.marginRight="350px";document.getElementById("close").style.marginRight="350px"},005)}}
-  function closeNav(){if($(window).width()>440){document.getElementById("spotMenu").style.transform="translateX(350px)";document.getElementById("map").style.marginRight="0";document.getElementById("open").style.marginRight="0";document.getElementById("close").style.marginRight="0";setTimeout(function(){document.getElementById("spotMenu").style.display="none"},400)}}
+  function openNav(){if($(window).width()>440){document.getElementById("spotMenu").style.display="initial";setTimeout(function(){document.getElementById("spotMenu").style.transform="translateX(0px)";document.getElementById("map").style.marginRight="350px";document.getElementById("matrix").style.right="350px";document.getElementById("open").style.marginRight="350px";document.getElementById("close").style.marginRight="350px"},005)}}
+  function closeNav(){if($(window).width()>440){document.getElementById("spotMenu").style.transform="translateX(350px)";document.getElementById("map").style.marginRight="0";document.getElementById("matrix").style.right="0";document.getElementById("open").style.marginRight="0";document.getElementById("close").style.marginRight="0";setTimeout(function(){document.getElementById("spotMenu").style.display="none"},400)}}
   </script>
 
 </body>
