@@ -7,14 +7,12 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>StreetScene | Spots</title>
-  <link rel="shortcut icon" href=".ico">
+  <link rel="shortcut icon" href="img/icons/logo.png">
   <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="animate.cs">
 
 </head>
 
-<body style="overflow-x:hidden">
+<body style="overflow-x:hidden" onload="initialize()">
   <!--Page background-->
   <div class="reg-background"></div>
 
@@ -31,20 +29,15 @@
       </header>
       <!--Navigation-->
       <div class="account">
-        <!--<div class="details">
-          <div class="usrName">John Doe</div>
-          <button type="button" name="log-out">Log out</button>
-        </div>-->
         <div class="register">
           <div class="signupWrap hide">
             <div class="head">
               <h2>sign up</h2>
             </div>
-            <form class="signup" action="#" method="post">
-              <input class="name" type="text" name="name" placeholder="Your Name" required>
+            <form class="signup" action="includes/signup.inc.php" method="post" autocomplete="false">
+              <input class="name" type="text" name="uid" placeholder="Username" required>
               <input class="email" type="text" name="email" placeholder="Your Email" required>
-              <input class="password" type="password" name="password" placeholder="Password" required>
-              <input class="password" type="password" name="password" placeholder="Confirm Password" required>
+              <input class="password" type="password" name="pwd" placeholder="Password" required>
               <button type="submit" name="submit">SIGN UP</button>
             </form>
             <button id="switch" type="button" name="logbtn">Already have an account?</button>
@@ -53,9 +46,9 @@
             <div class="head">
               <h2>login</h2>
             </div>
-            <form class="login" action="#" method="post">
-              <input class="email" type="text" name="email" placeholder="Email" required>
-              <input class="password" type="password" name="password" placeholder="Password" required>
+            <form class="login" action="includes/login.inc.php" method="post">
+              <input class="email" type="text" name="uid" placeholder="Username / Email" required>
+              <input class="password" type="password" name="pwd" placeholder="Password" required>
               <button type="submit" name="submit">LOGIN</button>
             </form>
             <div id="breakerAnim" class="breaker">Or</div>
@@ -65,7 +58,7 @@
             </div>
             <button id="switch" type="button" name="regbtn">Register</button>
           </div>
-        </div>-->
+        </div>
       </div>
       <nav>
         <ul>
@@ -78,12 +71,6 @@
             <li><a href="spots.html#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
           </ul>
           <li><a href="spots.html" class="spot">spots <span><img src="img/icons/pin.png" alt="locations"></span></a></li>
-          <!--Dropdown-->
-          <!--<ul class="spotDropdown hide">
-            <li><a href="#">find spot <span><img src="img/icons/search.png" alt="find spot"></span></a></li>
-            <li><a href="#">add spot <span><img src="img/icons/plus.png" alt="add spot"></span></a></li>
-            <li><a href="#">favourites <span><img src="img/icons/star.png" alt="favourites"></span></a></li>
-          </ul>-->
           <li><a href="#">about <span><img src="img/icons/info.png" alt="about"></span></a></li>
         </ul>
       </nav>
@@ -111,30 +98,19 @@
         <li><a href="spots.html#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
       </ul>
       <li><a href="spots.html" class="spot">spots<img src="img/icons/pin.png" alt="locations"></a></li>
-      <!--Dropdown-->
-      <!-- <ul class="spotDropdown hide">
-        <li><a href="#"><img src="img/icons/search.png" alt="find spot"></a></li>
-        <li><a href="#"><img src="img/icons/plus.png" alt="add spot"></a></li>
-        <li><a href="#"><img src="img/icons/star.png" alt="favourites"></a></li>
-      </ul>-->
       <li><a href="#">about<img src="img/icons/info.png" alt="about"></a></li>
     </ul>
     <!--Account/login/register-->
     <div class="account">
-      <!--<div class="details">
-        <div class="usrName">John Doe</div>
-        <button type="button" name="log-out">Log out</button>
-      </div>-->
       <div class="register">
         <div class="signupWrap hide">
           <div class="head">
             <h2>sign up</h2>
           </div>
-          <form class="signup" action="#" method="post">
-            <input class="name" type="text" name="name" placeholder="Your Name" required>
+          <form class="signup" action="includes/signup.inc.php" method="post" autocomplete="false">
+            <input class="name" type="text" name="uid" placeholder="Username" required>
             <input class="email" type="text" name="email" placeholder="Your Email" required>
-            <input class="password" type="password" name="password" placeholder="Password" required>
-            <input class="password" type="password" name="password" placeholder="Confirm Password" required>
+            <input class="password" type="password" name="pwd" placeholder="Password" required>
             <button type="submit" name="submit">SIGN UP</button>
           </form>
           <button id="switch" type="button" name="logbtn">Already have an account?</button>
@@ -143,9 +119,9 @@
           <div class="head">
             <h2>login</h2>
           </div>
-          <form class="login" action="#" method="post">
-            <input class="email" type="text" name="email" placeholder="Email" required>
-            <input class="password" type="password" name="password" placeholder="Password" required>
+          <form class="login" action="includes/login.inc.php" method="post">
+            <input class="email" type="text" name="uid" placeholder="Username / Email" required>
+            <input class="password" type="password" name="pwd" placeholder="Password" required>
             <button type="submit" name="submit">LOGIN</button>
           </form>
           <div id="breakerAnim" class="breaker">Or</div>
@@ -208,6 +184,50 @@
     <div id="close" class="menubtn closebtn invisible" onclick="closeNav()">
       <span class="tooltip">Collapse side menu</span>
     </div>
+    <!--Add spot btn-->
+    <div id="addSpotbtn">
+      <span class="tooltip">Add a new spot</span>
+    </div>
+    <!--Add location modal-->
+    <div class="modal-wrapper" style="display:none">
+      <div class="modal">
+        <div class="modal-header">
+          <div id="locator"></div>
+        </div>
+        <div class="modal-body">
+          <div class="addSpot">
+            <div class="title">Add a new spot</div>
+            <form class="addlocation" action="includes/addlocation.php" method="post">
+              <input type="text" name="name" placeholder="Spot Name" required>
+              <div class="searchWrapper">
+                <input id="address" type="text" name="address" placeholder="Street name, Country" required>
+                <button type="button" name="search" onclick="codeAddress()"></button>
+              </div>
+              <textarea type="text" name="description" placeholder="Tell us a little something about the spot. Is it decent? Recommended for who?" required></textarea>
+              <div class="btnOptions">
+                <button id="modal-close" type="button" name="close">CANCEL</button>
+                <button type="submit" name="submit">DROP IT LIKE IT'S HOT</button>
+              </div>
+            </form>
+          </div>
+          <div class="shareSpot">
+            <div class="title">Share Your spot</div>
+            <div class="share shareFb">
+              <div class="head">
+                <div class="facebookBtn icon"></div>Facebook</div>
+              <textarea id="fbtext" name="quote" placeholder="Say something about this..."></textarea>
+              <button id="fbPost" type="button" name="share">POST TO FACEBOOK</button>
+            </div>
+            <div class="share shareTweet">
+              <div class="head">
+                <div class="twitterBtn icon"></div>Twitter</div>
+              <textarea id="twtrtext" name="quote" placeholder="What's happening?"></textarea>
+              <button id="twtrPost" type="button" name="share">TWEET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!--Scripts-->
@@ -217,8 +237,10 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8DHt3YTwsj69q0RGe-YgQt5trWIky4gc&libraries=places&callback=initMap" async defer></script>
 
   <script>
-  function openNav(){if($(window).width()>440){document.getElementById("spotMenu").style.display="initial";setTimeout(function(){document.getElementById("spotMenu").style.transform="translateX(0px)";document.getElementById("map").style.marginRight="350px";document.getElementById("matrix").style.right="350px";document.getElementById("open").style.marginRight="350px";document.getElementById("close").style.marginRight="350px"},005)}}
-  function closeNav(){if($(window).width()>440){document.getElementById("spotMenu").style.transform="translateX(350px)";document.getElementById("map").style.marginRight="0";document.getElementById("matrix").style.right="0";document.getElementById("open").style.marginRight="0";document.getElementById("close").style.marginRight="0";setTimeout(function(){document.getElementById("spotMenu").style.display="none"},400)}}
+  $(document).ready(function(){alert('This is the static version of Streetscene, some features won\'t be available')});function openNav(){if($(window).width()>440){document.getElementById("spotMenu").style.display="initial";setTimeout(function(){document.getElementById("spotMenu").style.transform="translateX(0px)";document.getElementById("map").style.marginRight="350px";document.getElementById("matrix").style.right="350px";document.getElementById("open").style.marginRight="350px";document.getElementById("close").style.marginRight="350px"},100)}}
+  function closeNav(){if($(window).width()>440){document.getElementById("spotMenu").style.transform="translateX(350px)";document.getElementById("map").style.marginRight="0";document.getElementById("matrix").style.right="0";document.getElementById("open").style.marginRight="0";document.getElementById("close").style.marginRight="0";setTimeout(function(){document.getElementById("spotMenu").style.display="none"},400)}};var geocoder;var map2;function initialize(){geocoder=new google.maps.Geocoder();var latlng=new google.maps.LatLng(-34.397,150.644);var mapOptions={zoom:8,center:latlng}
+  map2=new google.maps.Map(document.getElementById('locator'),mapOptions)}
+  function codeAddress(){var address=document.getElementById('address').value;geocoder.geocode({'address':address},function(results,status){if(status=='OK'){map2.setCenter(results[0].geometry.location);var marker=new google.maps.Marker({map:map2,position:results[0].geometry.location})}else{alert('Geocode was not successful for the following reason: '+status)}})}
   </script>
 
 </body>
