@@ -7,133 +7,38 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>StreetScene | Spots</title>
-  <link rel="shortcut icon" href="img/icons/logo.png">
+  <link rel="shortcut icon" href=".ico">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="overflow-x:hidden" onload="initialize()">
-  <!--Page background-->
-  <div class="reg-background"></div>
-
-  <!--Side pannel-->
-  <aside class="pannel mainPannel">
-    <div class="inner">
-      <header class="smaller">
-        <div id="logoAnim-pannel" class="logoWrap">
-          <div class="logo">
-            <img src="img/icons/logo.png" alt="StreetScene">
-          </div>
-        </div>
-        <button type="button" name="profile"></button>
-      </header>
-      <!--Navigation-->
-      <div class="account">
-        <div class="register">
-          <div class="signupWrap hide">
-            <div class="head">
-              <h2>sign up</h2>
-            </div>
-            <form class="signup" action="includes/signup.inc.php" method="post" autocomplete="false">
-              <input class="name" type="text" name="uid" placeholder="Username" required>
-              <input class="email" type="text" name="email" placeholder="Your Email" required>
-              <input class="password" type="password" name="pwd" placeholder="Password" required>
-              <button type="submit" name="submit">SIGN UP</button>
-            </form>
-            <button id="switch" type="button" name="logbtn">Already have an account?</button>
-          </div>
-          <div class="loginWrap">
-            <div class="head">
-              <h2>login</h2>
-            </div>
-            <form class="login" action="includes/login.inc.php" method="post">
-              <input class="email" type="text" name="uid" placeholder="Username / Email" required>
-              <input class="password" type="password" name="pwd" placeholder="Password" required>
-              <button type="submit" name="submit">LOGIN</button>
-            </form>
-            <div id="breakerAnim" class="breaker">Or</div>
-            <div class="socialTabs">
-              <button class="facebookTab" type="button" name="button"><span class="facebookBtn"></span>Login with Facebook</button>
-              <button class="googleTab" type="button" name="button"><span class="googleBtn"></span>Login with Google</button>
-            </div>
-            <button id="switch" type="button" name="regbtn">Register</button>
-          </div>
-        </div>
-      </div>
+<body style="overflow-x:hidden">
+  <!--Navigation-->
+  <div class="top-bar">
+    <div class="main">
       <nav>
         <ul>
-          <li><a href="index.html">home<span><img src="img/icons/home.png" alt="home"></span></a></li>
-          <li><a class="category">category<span><img src="img/icons/category.png" alt="category"></span></a></li>
-          <!--Dropdown-->
-          <ul class="categoryDropdown hide">
-            <li><a href="spots.html#skateparks">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
-            <li><a href="spots.html#skateparks">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
-            <li><a href="spots.html#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
-          </ul>
-          <li><a href="spots.html" class="spot">spots <span><img src="img/icons/pin.png" alt="locations"></span></a></li>
-          <li><a href="#">about <span><img src="img/icons/info.png" alt="about"></span></a></li>
+          <li><a href="index.html" class="logo"></a></li>
+          <li class="dropdown">
+            <a class="categoryToggle" role="button">Category</a>
+            <ul class="dropdown-menu">
+              <li><a href="spots.html?locations=skatepark">Skateboarder</a></li>
+              <li><a href="spots.html?locations=skatepark">BMX Rider</a></li>
+              <li><a href="spots.html?locations=mtb">MTB Rider</a></li>
+            </ul>
+          </li>
+          <li><a href="spots.html">Spots</a></li>
+          <li><a role="button">About</a></li>
         </ul>
       </nav>
-      <div class="social">
-        <a class="facebookBtn smGlobalBtn" href="#"></a>
-        <a class="twitterBtn smGlobalBtn" href="#"></a>
-        <a class="pinterestBtn smGlobalBtn" href="#"></a>
+    </div>
+    <div class="secondary">
+      <div class="usrTab">
+        <div class="greet">Welcome Guest</div>
+        <div class="usr-dp" style="background-image:url(img/icons/profile.png)"></div>
       </div>
     </div>
-  </aside>
-  <!--Mobile Nav-->
-  <nav class="mblNav pannel">
-    <div class="container">
-      <button type="button" name="burger"></button>
-      <button type="button" name="profile"></button>
-    </div>
-    <!--Menu-->
-    <ul class="dropdown">
-      <li><a href="index.html">home<img src="img/icons/home.png" alt="home"></a></li>
-      <li><a class="category">category<img src="img/icons/category.png" alt="category"></a></li>
-      <!--Dropdown-->
-      <ul class="categoryDropdown hide">
-        <li><a href="spots.html#skateparks">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
-        <li><a href="spots.html#skateparks">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
-        <li><a href="spots.html#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
-      </ul>
-      <li><a href="spots.html" class="spot">spots<img src="img/icons/pin.png" alt="locations"></a></li>
-      <li><a href="#">about<img src="img/icons/info.png" alt="about"></a></li>
-    </ul>
-    <!--Account/login/register-->
-    <div class="account">
-      <div class="register">
-        <div class="signupWrap hide">
-          <div class="head">
-            <h2>sign up</h2>
-          </div>
-          <form class="signup" action="includes/signup.inc.php" method="post" autocomplete="false">
-            <input class="name" type="text" name="uid" placeholder="Username" required>
-            <input class="email" type="text" name="email" placeholder="Your Email" required>
-            <input class="password" type="password" name="pwd" placeholder="Password" required>
-            <button type="submit" name="submit">SIGN UP</button>
-          </form>
-          <button id="switch" type="button" name="logbtn">Already have an account?</button>
-        </div>
-        <div class="loginWrap">
-          <div class="head">
-            <h2>login</h2>
-          </div>
-          <form class="login" action="includes/login.inc.php" method="post">
-            <input class="email" type="text" name="uid" placeholder="Username / Email" required>
-            <input class="password" type="password" name="pwd" placeholder="Password" required>
-            <button type="submit" name="submit">LOGIN</button>
-          </form>
-          <div id="breakerAnim" class="breaker">Or</div>
-          <div class="socialTabs">
-            <button class="facebookTab" type="button" name="button"><span class="facebookBtn"></span>Login with Facebook</button>
-            <button class="googleTab" type="button" name="button"><span class="googleBtn"></span>Login with Google</button>
-          </div>
-          <button id="switch" type="button" name="regbtn">Register</button>
-        </div>
-      </div>
-    </div>
-  </nav>
+  </div>
 
   <!--Main content-->
   <div id="mainContent" class="mainContent fd-row">
@@ -146,23 +51,36 @@
         <div class="searchWrap">
           <div class="initialSearch">
             <div class="searchBox">
-              <input id="addressInput" type="text" name="search" placeholder="Search a place" />
+              <input class="gsearch" id="addressInput" type="text" name="search" placeholder="Search a place" />
               <button id="searchButton" type="button" name="search"></button>
               <button id="geo" type="button" name="geo"></button>
             </div>
           </div>
           <div class="trvlmWrap">
-            <div class="trvlMode">
-              <input id="selected" class="driving" type="button" name="car" value="DRIVING">
+            <div class="trvlType">
+              <div class="trvlMode">
+                <input id="selected" class="driving" type="button" name="car" value="DRIVING">
+              </div>
+              <div class="trvlMode">
+                <input class="transit" type="button" name="transit" value="TRANSIT">
+              </div>
+              <div class="trvlMode">
+                <input class="bicycling" type="button" name="bike" value="BICYCLING">
+              </div>
+              <div class="trvlMode">
+                <input class="walking" type="button" name="walk" value="WALKING">
+              </div>
             </div>
-            <div class="trvlMode">
-              <input class="transit" type="button" name="transit" value="TRANSIT">
-            </div>
-            <div class="trvlMode">
-              <input class="bicycling" type="button" name="bike" value="BICYCLING">
-            </div>
-            <div class="trvlMode">
-              <input class="walking" type="button" name="walk" value="WALKING">
+            <div class="trvlDistance">
+              <select class="radius" id="radiusSelect">
+                <option value="" disabled selected>Select Radius</option>
+                <option value="5">Within 5 miles</option>
+                <option value="10" id="defaultRadius">Within 10 miles</option>
+                <option value="15">Within 15 miles</option>
+                <option value="20">Within 20 miles</option>
+                <option value="25">Within 25 miles</option>
+                <option value="30">Within 30 miles</option>
+              </select>
             </div>
           </div>
         </div>
@@ -173,9 +91,7 @@
           </div>
         </div>
       </header>
-      <div id="places">
-        <!--Card locations are placed here-->
-      </div>
+      <div id="places"><!--Card locations are placed here--></div>
     </aside>
     <!--Open and close btns-->
     <div id="open" class="menubtn openbtn" onclick="openNav()">
@@ -184,50 +100,8 @@
     <div id="close" class="menubtn closebtn invisible" onclick="closeNav()">
       <span class="tooltip">Collapse side menu</span>
     </div>
-    <!--Add spot btn-->
-    <div id="addSpotbtn">
-      <span class="tooltip">Add a new spot</span>
-    </div>
-    <!--Add location modal-->
-    <div class="modal-wrapper" style="display:none">
-      <div class="modal">
-        <div class="modal-header">
-          <div id="locator"></div>
-        </div>
-        <div class="modal-body">
-          <div class="addSpot">
-            <div class="title">Add a new spot</div>
-            <form class="addlocation" action="includes/addlocation.php" method="post">
-              <input type="text" name="name" placeholder="Spot Name" required>
-              <div class="searchWrapper">
-                <input id="address" type="text" name="address" placeholder="Street name, Country" required>
-                <button type="button" name="search" onclick="codeAddress()"></button>
-              </div>
-              <textarea type="text" name="description" placeholder="Tell us a little something about the spot. Is it decent? Recommended for who?" required></textarea>
-              <div class="btnOptions">
-                <button id="modal-close" type="button" name="close">CANCEL</button>
-                <button type="submit" name="submit">DROP IT LIKE IT'S HOT</button>
-              </div>
-            </form>
-          </div>
-          <div class="shareSpot">
-            <div class="title">Share Your spot</div>
-            <div class="share shareFb">
-              <div class="head">
-                <div class="facebookBtn icon"></div>Facebook</div>
-              <textarea id="fbtext" name="quote" placeholder="Say something about this..."></textarea>
-              <button id="fbPost" type="button" name="share">POST TO FACEBOOK</button>
-            </div>
-            <div class="share shareTweet">
-              <div class="head">
-                <div class="twitterBtn icon"></div>Twitter</div>
-              <textarea id="twtrtext" name="quote" placeholder="What's happening?"></textarea>
-              <button id="twtrPost" type="button" name="share">TWEET</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--Footer-->
+    <a class="signature" href="https://callumcolley.github.io" target="_blank"><img src="img/icons/signature.png" alt="callumcolley.github.io"></a>
   </div>
 
   <!--Scripts-->
@@ -237,10 +111,9 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8DHt3YTwsj69q0RGe-YgQt5trWIky4gc&libraries=places&callback=initMap" async defer></script>
 
   <script>
-  $(document).ready(function(){alert('This is the static version of Streetscene, some features won\'t be available')});function openNav(){if($(window).width()>440){document.getElementById("spotMenu").style.display="initial";setTimeout(function(){document.getElementById("spotMenu").style.transform="translateX(0px)";document.getElementById("map").style.marginRight="350px";document.getElementById("matrix").style.right="350px";document.getElementById("open").style.marginRight="350px";document.getElementById("close").style.marginRight="350px"},100)}}
-  function closeNav(){if($(window).width()>440){document.getElementById("spotMenu").style.transform="translateX(350px)";document.getElementById("map").style.marginRight="0";document.getElementById("matrix").style.right="0";document.getElementById("open").style.marginRight="0";document.getElementById("close").style.marginRight="0";setTimeout(function(){document.getElementById("spotMenu").style.display="none"},400)}};var geocoder;var map2;function initialize(){geocoder=new google.maps.Geocoder();var latlng=new google.maps.LatLng(-34.397,150.644);var mapOptions={zoom:8,center:latlng}
-  map2=new google.maps.Map(document.getElementById('locator'),mapOptions)}
-  function codeAddress(){var address=document.getElementById('address').value;geocoder.geocode({'address':address},function(results,status){if(status=='OK'){map2.setCenter(results[0].geometry.location);var marker=new google.maps.Marker({map:map2,position:results[0].geometry.location})}else{alert('Geocode was not successful for the following reason: '+status)}})}
+  function openNav(){if($(window).width()>440){document.getElementById("spotMenu").style.display="initial";setTimeout(function(){document.getElementById("spotMenu").style.transform="translateX(0px)";document.getElementById("map").style.marginRight="350px";document.getElementById("matrix").style.right = "350px";document.getElementById("open").style.marginRight="350px";document.getElementById("close").style.marginRight="350px"},100)}}
+  function closeNav(){if($(window).width()>440){setTimeout(function(){document.getElementById("spotMenu").style.transform="translateX(350px)";document.getElementById("map").style.marginRight="0";document.getElementById("matrix").style.right = "0";document.getElementById("open").style.marginRight="0";document.getElementById("close").style.marginRight="0"},100);setTimeout(function(){document.getElementById("spotMenu").style.display="none"},400)}};
+  alert('This is the static site for Streetscene. Some features won\'t be available');
   </script>
 
 </body>

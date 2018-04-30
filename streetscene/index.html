@@ -7,7 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>StreetScene</title>
-  <link rel="shortcut icon" href="img/icons/logo.png">
+  <link rel="shortcut icon" href=".ico">
   <link rel="stylesheet" href="css/style.css">
 
   <style>
@@ -40,14 +40,21 @@
       <nav>
         <ul>
           <li><a href="index.html">home<span><img src="img/icons/home.png" alt="home"></span></a></li>
-          <li><a href="#" class="category">category<span><img src="img/icons/category.png" alt="category"></span></a></li>
+          <li class="category"><a role="button">category<span><img src="img/icons/category.png" alt="category"></span></a>
           <!--Dropdown-->
           <ul class="categoryDropdown hide">
-            <li><a href="spots.html#skateparks">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
-            <li><a href="spots.html#skateparks">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
-            <li><a href="spots.html#mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
+            <li><a href="spots.html?locations=skatepark">skateboarder <span><img src="img/icons/skateboard.png" alt="skateboard"></span></a></li>
+            <li><a href="spots.html?locations=skatepark">bmx rider <span><img src="img/icons/bmx.png" alt="bmx"></span></a></li>
+            <li><a href="spots.html?locations=mtb">trail rider <span><img src="img/icons/trail-bike.png" alt="tail bike"></span></a></li>
           </ul>
+        </li>
           <li><a href="spots.html" class="spot">spots <span><img src="img/icons/pin.png" alt="locations"></span></a></li>
+          <!--Dropdown
+          <ul class="spotDropdown hide">
+            <li><a href="#">find spot <span><img src="img/icons/search.png" alt="find spot"></span></a></li>
+            <li><a href="#">add spot <span><img src="img/icons/plus.png" alt="add spot"></span></a></li>
+            <li><a href="#">favourites <span><img src="img/icons/star.png" alt="favourites"></span></a></li>
+          </ul>-->
           <li><a href="#">about <span><img src="img/icons/info.png" alt="about"></span></a></li>
         </ul>
       </nav>
@@ -68,27 +75,21 @@
   <!--Panneled background-->
   <div class="home-wrapper">
     <div class="top">
-      <a href="spots.html#skateparks">
-        <div class="skateboard c-ripple js-ripple">
-          <span class="c-ripple__circle"></span>
-        </div>
+      <a href="spots.html?locations=skatepark">
+        <div class="skateboard"></div>
       </a>
     </div>
     <div class="middle">
       <h1 class="title skateboarder">skateboarder</h1>
       <h1 class="title bmx-rider">bmx rider</h1>
       <h1 class="title trail-rider">trail rider</h1>
-      <a href="spots.html#skateparks" class="c-button">
-        <div class="bmx c-ripple js-ripple">
-          <span class="c-ripple__circle"></span>
-        </div>
+      <a href="spots.html?locations=skatepark">
+        <div class="bmx"></div>
       </a>
     </div>
     <div class="bottom">
-      <a href="spots.html#mtb">
-        <div class="trail-bike c-ripple js-ripple">
-          <span class="c-ripple__circle"></span>
-        </div>
+      <a href="spots.html?locations=mtb">
+        <div class="trail-bike"></div>
       </a>
     </div>
   </div>
